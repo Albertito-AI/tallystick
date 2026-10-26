@@ -48,4 +48,5 @@ A bounded public check on 26 October 2026 found existing products using the name
 including [Tallystick invoice tools](https://tally-stick.com/api) and
 [ShadowForge's Tallystick scorepad](https://shadowforge.dev/tallystick/).
 This is evidence of prior use, not a trade mark search or legal conclusion. The
-development repository remains private while the working name is reviewed.
+experimental repository is public from 26 October 2026. The working name remains
+under review before a broader product launch.

@@ -4,9 +4,9 @@ This is a local research implementation with synthetic data and no real-money
 connection. Use isolated development environments and permitted test inputs.
 No production security audit or supplier certification is claimed.
 
-Report a reproducible issue through GitHub private vulnerability reporting if
-that feature is available. Otherwise contact the repository owner privately;
-do not put personal data, supplier data, private keys or working exploit
+Private vulnerability reporting is enabled. Use the repository's **Security** tab
+and **Report a vulnerability** to send a reproducible security issue privately.
+Do not put personal data, supplier data, private keys or working exploit
 credentials in public issues. Include the commit, platform, smallest synthetic
 reproduction and observed versus expected behaviour.
 

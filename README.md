@@ -7,8 +7,11 @@ checks declared data permissions, compiles a small market definition, preserves
 corrections and exports evidence that a separate verifier can check. A second,
 independent JavaScript evaluator checks the Python settlement implementation.
 
-Tallystick is a working name. This repository is a private development project.
+Tallystick is a working name. This repository is a public experimental reference.
 Existing products already use the name; no trade mark clearance is claimed.
+
+The repository became public on 26 October 2026. Independent user reproduction,
+the next versioned release and any customer pilot remain separate milestones.
 
 ![Synthetic settlement review dashboard](docs/dashboard-preview.png)
 
@@ -164,6 +167,22 @@ external dataset, with explicit completeness criteria and an independent
 comparison. Live-feed contracts, supplier licensing, reviewed real-jurisdiction
 policies, production infrastructure, security assessment, liability arrangements
 and operator acceptance remain prerequisites for any live service.
+
+## Build with us
+
+We welcome co-creators in engineering, documentation, testing and domain review.
+Start with the [contribution guide](CONTRIBUTING.md), which contains three bounded
+starter tasks and their completion evidence. Reproducing the quickstart, checking
+correction edge cases and explaining evidence verification are useful first steps.
+Use [Issues](https://github.com/Albertito-AI/tallystick/issues) to coordinate a task
+and pull requests to propose changes. Keep all public examples synthetic or
+documented as permitted for publication.
+
+Accepted contributions receive accurate credit. When funded opportunities arise,
+we can agree paid development, research, documentation or support work. Roles,
+deliverables, intellectual-property arrangements and payment terms must be agreed
+before that work begins. Participation alone creates no payment entitlement or
+automatic revenue share.
 
 ## Licensing
 

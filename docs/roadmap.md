@@ -54,5 +54,7 @@ establish a customer, partnership or revenue stream. Those outcomes require
 separate work and verifiable receipts.
 
 Tallystick remains a working name. Resolve naming and branding questions before
-a public product launch. The research implementation can proceed in the private
-development repository while those questions remain open.
+a public product launch. The experimental repository became public on 26 October
+2026 under the owner's instruction to refine it openly and welcome co-creators.
+Public visibility is complete; independent external reproduction, a validated
+versioned release and a funded pilot retain their own evidence requirements.
