@@ -73,8 +73,12 @@ the official action commit SHAs checked during this build. Read the result for
 the exact commit in GitHub Actions; a workflow definition alone is not evidence
 that its jobs passed.
 
-The local operating system was Linux. Windows and other Python-version outcomes
-must be read from the relevant CI run. The development-container configuration
+The first [GitHub Actions run](https://github.com/Albertito-AI/tallystick/actions/runs/40320423727)
+completed successfully for implementation commit
+`28fb41ce6b41e90a89535e9d2145e307e5170b4a`. All five jobs passed:
+Ubuntu/Python 3.11, Ubuntu/Python 3.14, Windows/Python 3.12, optional SciPy pricing,
+and the bounded models. Those platform outcomes were observed on the remote
+runners. The local operating system was Linux. The development-container configuration
 uses the documented official Python image and Node feature, but Docker was not
 available for a local container build. No Codespace or hosted production service
 was provisioned during local validation.

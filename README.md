@@ -10,6 +10,12 @@ independent JavaScript evaluator checks the Python settlement implementation.
 Tallystick is a working name. This repository is a private development project.
 Existing products already use the name; no trade mark clearance is claimed.
 
+![Synthetic settlement review dashboard](docs/dashboard-preview.png)
+
+[Validation run](https://github.com/Albertito-AI/tallystick/actions/runs/40320423727):
+all five jobs passed for implementation commit `28fb41c`, including Windows,
+Python 3.11/3.14, optional pricing coherence and both bounded models.
+
 ## Run it
 
 Python 3.11 or later is required. Node.js 22 or later is also needed for the
