@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tallystick:schema:configuration:0.1",
+  "title": "Tallystick configuration input, version 0.1",
+  "description": "Sources, declared synthetic licences, and TEST rule packs used by the compiler. An optional bundled market is a proposal; cross-references and admission require application validation.",
+  "$comment": "SPDX-License-Identifier: CC-BY-4.0; Copyright 2026 Albert Tan Sin Hon. See spec/LICENSE.",
+  "type": "object",
+  "minProperties": 3,
+  "maxProperties": 4,
+  "required": [
+    "sources",
+    "licences",
+    "rulepacks"
+  ],
+  "properties": {
+    "sources": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1000,
+      "propertyNames": {
+        "$ref": "#/$defs/token"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "licences": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/licence"
+      },
+      "uniqueItems": true
+    },
+    "rulepacks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/rulepack"
+      },
+      "uniqueItems": true
+    },
+    "market": {
+      "$ref": "urn:tallystick:schema:market:0.1"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "token": {
+      "$ref": "urn:tallystick:schema:market:0.1#/$defs/token"
+    },
+    "utcTimestamp": {
+      "$ref": "urn:tallystick:schema:market:0.1#/$defs/utcTimestamp"
+    },
+    "source": {
+      "type": "object",
+      "minProperties": 2,
+      "maxProperties": 2,
+      "required": [
+        "independence_group",
+        "official_kinds"
+      ],
+      "properties": {
+        "independence_group": {
+          "$ref": "#/$defs/token"
+        },
+        "official_kinds": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "enum": [
+              "corner.awarded",
+              "goal.scored",
+              "period.closed",
+              "event.abandoned"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "licence": {
+      "type": "object",
+      "minProperties": 9,
+      "maxProperties": 9,
+      "required": [
+        "schema_version",
+        "licence_id",
+        "source_ids",
+        "uses",
+        "territories",
+        "valid_from",
+        "valid_until",
+        "fact_types",
+        "synthetic"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "0.1"
+        },
+        "licence_id": {
+          "$ref": "#/$defs/token"
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "$ref": "#/$defs/token"
+          },
+          "uniqueItems": true
+        },
+        "uses": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "type": "string",
+            "enum": [
+              "display",
+              "pricing",
+              "settlement",
+              "redistribution",
+              "training"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "territories": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "$ref": "#/$defs/token"
+          },
+          "uniqueItems": true
+        },
+        "valid_from": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "valid_until": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "fact_types": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "type": "string",
+            "enum": [
+              "corner.awarded",
+              "goal.scored",
+              "period.closed",
+              "event.abandoned"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "synthetic": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "rulepack": {
+      "type": "object",
+      "minProperties": 13,
+      "maxProperties": 13,
+      "required": [
+        "schema_version",
+        "rulepack_id",
+        "version",
+        "jurisdiction",
+        "basis",
+        "reviewer",
+        "reviewed_at",
+        "valid_from",
+        "valid_until",
+        "allow_consumer",
+        "min_window_seconds",
+        "allowed_fact_types",
+        "required_state"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "0.1"
+        },
+        "rulepack_id": {
+          "$ref": "#/$defs/token"
+        },
+        "version": {
+          "$ref": "#/$defs/token"
+        },
+        "jurisdiction": {
+          "type": "string",
+          "const": "TEST"
+        },
+        "basis": {
+          "type": "string",
+          "const": "synthetic"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Application validation additionally requires printable text that is nonblank after Python Unicode whitespace stripping."
+        },
+        "reviewed_at": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "valid_from": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "valid_until": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "allow_consumer": {
+          "type": "boolean",
+          "const": false
+        },
+        "min_window_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 86400
+        },
+        "allowed_fact_types": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "enum": [
+              "corner.awarded",
+              "goal.scored"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "required_state": {
+          "type": "string",
+          "enum": [
+            "official",
+            "final"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

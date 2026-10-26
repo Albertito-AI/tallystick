@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "market_id": "demo-corners-h2-over-4.5",
+  "event_id": "synthetic-match-001",
+  "name": "Fictional second-half corners over 4.5",
+  "settlement": {
+    "fact_type": "corner.awarded",
+    "period": 2,
+    "threshold": 5,
+    "min_state": "official"
+  },
+  "outcomes": [
+    "over",
+    "under"
+  ],
+  "close_at": "2026-01-01T12:45:00Z",
+  "correction_deadline": "2026-01-02T14:00:00Z",
+  "jurisdiction": "TEST",
+  "licence_id": "synthetic-licence",
+  "rulepack_id": "TEST-2026",
+  "consumer": false,
+  "window_seconds": 2700,
+  "participant_scope": "aggregate",
+  "batch_window_ms": 250
+}

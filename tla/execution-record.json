@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-26T11:47:12.422618Z",
+  "tool_release": "tlaplus/tlaplus v1.7.4",
+  "tool_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+  "scope": "Bounded abstract invariant checks; no implementation refinement or liveness proof",
+  "models": [
+    {
+      "model": "Settlement",
+      "source_sha256": "0386b859af3a18ae2718dfac304fc794e76d66d9ae3ee27c089633b57980b59a",
+      "config_sha256": "d2084cc5b7402acd7777b0a58e4a3a7c44424834f2c3a080c166631ba59b2c6a",
+      "exit_code": 0,
+      "passed": true,
+      "generated_states": 1267,
+      "distinct_states": 195,
+      "output": "TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)\nRunning breadth-first search Model-Checking with fp 8 and seed -6328462647183328255 with 1 worker on 8 cores with 455MB heap and 64MB offheap memory [pid: 19916] (Linux 6.18.55 amd64, Ubuntu 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).\nParsing file /workspace/scratch/fd837ee8695b/tallystick/tla/Settlement.tla\nParsing file /tmp/Naturals.tla\nParsing file /tmp/Integers.tla\nSemantic processing of module Naturals\nSemantic processing of module Integers\nSemantic processing of module Settlement\nStarting... (2026-10-26 04:47:11)\nComputing initial states...\nFinished computing initial states: 1 distinct state generated at 2026-10-26 04:47:11.\nModel checking completed. No error has been found.\n  Estimates of the probability that TLC did not check all reachable states\n  because two distinct states had the same fingerprint:\n  calculated (optimistic):  val = 1.1E-14\n1267 states generated, 195 distinct states found, 0 states left on queue.\nThe depth of the complete state graph search is 9.\nThe average outdegree of the complete state graph is 1 (minimum is 0, the maximum 6 and the 95th percentile is 5).\nFinished in 00s at (2026-10-26 04:47:11)\n"
+    },
+    {
+      "model": "Acceptance",
+      "source_sha256": "deda199b8197db7c9fcca4170ae6ac2f084e71d10d42f0644fb21e2959f8e78e",
+      "config_sha256": "f2903778e80344dbbea1b34ae903d75fea7171ad0a818cc72e13ca00fe0243be",
+      "exit_code": 0,
+      "passed": true,
+      "generated_states": 87,
+      "distinct_states": 26,
+      "output": "TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)\nRunning breadth-first search Model-Checking with fp 99 and seed -1926211943956330598 with 1 worker on 8 cores with 455MB heap and 64MB offheap memory [pid: 19944] (Linux 6.18.55 amd64, Ubuntu 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).\nParsing file /workspace/scratch/fd837ee8695b/tallystick/tla/Acceptance.tla\nParsing file /tmp/Naturals.tla\nParsing file /tmp/FiniteSets.tla\nParsing file /tmp/Sequences.tla\nSemantic processing of module Naturals\nSemantic processing of module Sequences\nSemantic processing of module FiniteSets\nSemantic processing of module Acceptance\nStarting... (2026-10-26 04:47:11)\nComputing initial states...\nFinished computing initial states: 1 distinct state generated at 2026-10-26 04:47:12.\nModel checking completed. No error has been found.\n  Estimates of the probability that TLC did not check all reachable states\n  because two distinct states had the same fingerprint:\n  calculated (optimistic):  val = 8.6E-17\n87 states generated, 26 distinct states found, 0 states left on queue.\nThe depth of the complete state graph search is 6.\nThe average outdegree of the complete state graph is 1 (minimum is 0, the maximum 4 and the 95th percentile is 3).\nFinished in 00s at (2026-10-26 04:47:12)\n"
+    }
+  ]
+}

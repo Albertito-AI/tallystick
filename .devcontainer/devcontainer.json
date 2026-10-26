@@ -1,0 +1,22 @@
+{
+  "name": "Tallystick research",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "22",
+      "pnpmVersion": "none",
+      "nodeGypDependencies": false
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "python .devcontainer/bootstrap.py",
+  "forwardPorts": [8765],
+  "portsAttributes": {
+    "8765": {"label": "Synthetic settlement review", "onAutoForward": "notify"}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"}
+    }
+  }
+}

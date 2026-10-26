@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tallystick:schema:fact:0.1",
+  "title": "Tallystick fact input, version 0.1",
+  "description": "One unsigned fact payload for settlement.validate_fact_shape. Passing this schema does not validate revision history, source authority, permissions, or signatures.",
+  "$comment": "SPDX-License-Identifier: CC-BY-4.0; Copyright 2026 Albert Tan Sin Hon. See spec/LICENSE.",
+  "type": "object",
+  "minProperties": 17,
+  "maxProperties": 17,
+  "required": [
+    "schema_version",
+    "fact_id",
+    "observation_id",
+    "event_id",
+    "kind",
+    "period",
+    "subject",
+    "value",
+    "state",
+    "source_ids",
+    "licence_id",
+    "occurred_at",
+    "received_at",
+    "supersedes",
+    "reason",
+    "correction_deadline",
+    "metric"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "fact_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "observation_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "event_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "corner.awarded",
+        "goal.scored",
+        "period.closed",
+        "event.abandoned"
+      ]
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "subject": {
+      "$ref": "#/$defs/identifier"
+    },
+    "value": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "provisional",
+        "corroborated",
+        "official",
+        "final"
+      ]
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/identifier"
+      },
+      "uniqueItems": true
+    },
+    "licence_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "occurred_at": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "received_at": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "supersedes": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/identifier"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "Application validation additionally rejects text empty after Python Unicode whitespace stripping."
+        }
+      ]
+    },
+    "correction_deadline": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "metric": {
+      "enum": [
+        null,
+        "corner.awarded",
+        "goal.scored"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "period.closed"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "metric": {
+            "type": "string",
+            "enum": [
+              "corner.awarded",
+              "goal.scored"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "value": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "metric": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[!-~]{1,160}(?![\\s\\S])",
+      "description": "Fact-shape identifier: printable ASCII without spaces; registry-backed IDs may have tighter token requirements."
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 27,
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]{1,6})?Z(?![\\s\\S])",
+      "format": "date-time",
+      "description": "UTC calendar timestamp with seconds, optional 1-6 fractional digits, and Z. Application parsing and chronology checks remain required."
+    }
+  }
+}

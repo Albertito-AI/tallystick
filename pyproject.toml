@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tallystick-research"
+version = "0.1.0"
+description = "Synthetic sports fact provenance and settlement research workbench"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name = "Albert Tan Sin Hon"}]
+dependencies = ["cryptography>=44,<51"]
+
+[project.optional-dependencies]
+coherence = ["scipy>=1.13,<2"]
+
+[project.scripts]
+tallystick = "tallystick.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tallystick = ["data/*.json", "web/*.html"]

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tallystick:schema:market:0.1",
+  "title": "Tallystick market input, version 0.1",
+  "description": "Market proposal shape for compiler.validate_market. Syntactically valid proposals can still be rejected by policy, time, rights, source authority, or simulation-only admission.",
+  "$comment": "SPDX-License-Identifier: CC-BY-4.0; Copyright 2026 Albert Tan Sin Hon. See spec/LICENSE.",
+  "type": "object",
+  "minProperties": 15,
+  "maxProperties": 15,
+  "required": [
+    "schema_version",
+    "market_id",
+    "event_id",
+    "name",
+    "settlement",
+    "outcomes",
+    "close_at",
+    "correction_deadline",
+    "jurisdiction",
+    "licence_id",
+    "rulepack_id",
+    "consumer",
+    "window_seconds",
+    "participant_scope",
+    "batch_window_ms"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "market_id": {
+      "$ref": "#/$defs/token"
+    },
+    "event_id": {
+      "$ref": "#/$defs/token"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Application validation requires Python-printable display text and rejects selected embedded directives."
+    },
+    "settlement": {
+      "type": "object",
+      "minProperties": 4,
+      "maxProperties": 4,
+      "required": [
+        "fact_type",
+        "period",
+        "threshold",
+        "min_state"
+      ],
+      "properties": {
+        "fact_type": {
+          "type": "string",
+          "enum": [
+            "corner.awarded",
+            "goal.scored"
+          ]
+        },
+        "period": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "threshold": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "min_state": {
+          "type": "string",
+          "enum": [
+            "official",
+            "final"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "outcomes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "const": [
+        "over",
+        "under"
+      ]
+    },
+    "close_at": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "correction_deadline": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "jurisdiction": {
+      "$ref": "#/$defs/token"
+    },
+    "licence_id": {
+      "$ref": "#/$defs/token"
+    },
+    "rulepack_id": {
+      "$ref": "#/$defs/token"
+    },
+    "consumer": {
+      "type": "boolean",
+      "description": "True is syntactically valid but rejected by the synthetic-only compiler."
+    },
+    "window_seconds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 86400
+    },
+    "participant_scope": {
+      "type": "string",
+      "enum": [
+        "aggregate",
+        "single_actor"
+      ],
+      "description": "single_actor is a recognized proposal value but is rejected by the current compiler."
+    },
+    "batch_window_ms": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "token": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:/-]{0,127}(?![\\s\\S])"
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 27,
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]{1,6})?Z(?![\\s\\S])",
+      "format": "date-time",
+      "description": "UTC calendar timestamp with seconds, optional 1-6 fractional digits, and Z. Application parsing and chronology checks remain required."
+    }
+  }
+}

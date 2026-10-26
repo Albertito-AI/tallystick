@@ -1,0 +1,3796 @@
+[
+  {
+    "name": "over",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 6,
+      "reasons": []
+    }
+  },
+  {
+    "name": "under",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "under",
+      "count": 4,
+      "reasons": []
+    }
+  },
+  {
+    "name": "zero_with_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "under",
+      "count": 0,
+      "reasons": []
+    }
+  },
+  {
+    "name": "empty_is_pending",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "no_event_facts"
+      ]
+    }
+  },
+  {
+    "name": "missing_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "missing_closure"
+      ]
+    }
+  },
+  {
+    "name": "incomplete_feed",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 7,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "closure_count_mismatch"
+      ]
+    }
+  },
+  {
+    "name": "unconfirmed_occurrence",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "provisional",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "insufficient_fact_state"
+      ]
+    }
+  },
+  {
+    "name": "unconfirmed_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "provisional",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "insufficient_closure_state"
+      ]
+    }
+  },
+  {
+    "name": "official_abandonment",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "abandonment-v1",
+          "observation_id": "abandonment",
+          "event_id": "fictional-match-001",
+          "kind": "event.abandoned",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "void",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "event_abandoned"
+      ]
+    }
+  },
+  {
+    "name": "unconfirmed_abandonment",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "abandonment-v1",
+          "observation_id": "abandonment",
+          "event_id": "fictional-match-001",
+          "kind": "event.abandoned",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "provisional",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "unconfirmed_abandonment"
+      ]
+    }
+  },
+  {
+    "name": "conflicting_closure_identity",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "second-closure-v1",
+          "observation_id": "second-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "ambiguous_closure"
+      ]
+    }
+  },
+  {
+    "name": "deadline_mismatch",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T23:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-005-v1",
+          "observation_id": "fictional-match-001-corner-005",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 6,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "correction_deadline_mismatch"
+      ]
+    }
+  },
+  {
+    "name": "equivalent_deadline_instant",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00.000000Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 5,
+      "reasons": []
+    }
+  },
+  {
+    "name": "correction_waits_for_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "closure_count_mismatch"
+      ]
+    }
+  },
+  {
+    "name": "correction_changes_outcome",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1-next",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:01:00Z",
+          "supersedes": "fictional-match-001-closure-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "under",
+      "count": 4,
+      "reasons": []
+    }
+  },
+  {
+    "name": "replay_before_correction",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1-next",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:01:00Z",
+          "supersedes": "fictional-match-001-closure-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-03T23:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 5,
+      "reasons": []
+    }
+  },
+  {
+    "name": "replay_between_correction_messages",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1-next",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:01:00Z",
+          "supersedes": "fictional-match-001-closure-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T08:00:30Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "closure_count_mismatch"
+      ]
+    }
+  },
+  {
+    "name": "offsetting_corrections_need_fresh_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "previously-withdrawn-corner-v1",
+          "observation_id": "previously-withdrawn-corner",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "previously-withdrawn-corner-v1-next",
+          "observation_id": "previously-withdrawn-corner",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:01Z",
+          "supersedes": "previously-withdrawn-corner-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "stale_closure"
+      ]
+    }
+  },
+  {
+    "name": "refreshed_same_count_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "previously-withdrawn-corner-v1",
+          "observation_id": "previously-withdrawn-corner",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 0,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "previously-withdrawn-corner-v1-next",
+          "observation_id": "previously-withdrawn-corner",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:00:01Z",
+          "supersedes": "previously-withdrawn-corner-v1",
+          "reason": "Fictional source correction",
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1-next",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T08:01:00Z",
+          "supersedes": "fictional-match-001-closure-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 5,
+      "reasons": []
+    }
+  },
+  {
+    "name": "promotion_alone_keeps_closure",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-004-v1",
+          "observation_id": "fictional-match-001-corner-004",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 5,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        }
+      ],
+      "as_of": "2026-11-04T22:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 5,
+      "reasons": []
+    }
+  },
+  {
+    "name": "final_required",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "final"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "pending",
+      "outcome": null,
+      "count": null,
+      "reasons": [
+        "insufficient_closure_state"
+      ]
+    }
+  },
+  {
+    "name": "final_after_deadline",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "corner.awarded",
+          "period": 2,
+          "threshold": 5,
+          "min_state": "final"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1-next",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-corner-000-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1-next",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-corner-001-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-002-v1-next",
+          "observation_id": "fictional-match-001-corner-002",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-corner-002-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-003-v1-next",
+          "observation_id": "fictional-match-001-corner-003",
+          "event_id": "fictional-match-001",
+          "kind": "corner.awarded",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-corner-003-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1-next",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 4,
+          "state": "final",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-04T22:00:00Z",
+          "supersedes": "fictional-match-001-closure-v1",
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "corner.awarded"
+        }
+      ],
+      "as_of": "2026-11-04T22:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "under",
+      "count": 4,
+      "reasons": []
+    }
+  },
+  {
+    "name": "second_metric",
+    "input": {
+      "market": {
+        "schema_version": "0.1",
+        "market_id": "fictional-match-001-corners",
+        "event_id": "fictional-match-001",
+        "settlement": {
+          "fact_type": "goal.scored",
+          "period": 2,
+          "threshold": 2,
+          "min_state": "official"
+        },
+        "correction_deadline": "2026-11-04T22:00:00Z"
+      },
+      "facts": [
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-000-v1",
+          "observation_id": "fictional-match-001-corner-000",
+          "event_id": "fictional-match-001",
+          "kind": "goal.scored",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-corner-001-v1",
+          "observation_id": "fictional-match-001-corner-001",
+          "event_id": "fictional-match-001",
+          "kind": "goal.scored",
+          "period": 2,
+          "subject": "all",
+          "value": 1,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": null
+        },
+        {
+          "schema_version": "0.1",
+          "fact_id": "fictional-match-001-closure-v1",
+          "observation_id": "fictional-match-001-closure",
+          "event_id": "fictional-match-001",
+          "kind": "period.closed",
+          "period": 2,
+          "subject": "all",
+          "value": 2,
+          "state": "official",
+          "source_ids": [
+            "fictional-official-source"
+          ],
+          "licence_id": "fictional-test-licence",
+          "occurred_at": "2026-11-03T20:50:00Z",
+          "received_at": "2026-11-03T21:00:00Z",
+          "supersedes": null,
+          "reason": null,
+          "correction_deadline": "2026-11-04T22:00:00Z",
+          "metric": "goal.scored"
+        }
+      ],
+      "as_of": "2026-11-04T10:00:00Z"
+    },
+    "expected": {
+      "status": "settled",
+      "outcome": "over",
+      "count": 2,
+      "reasons": []
+    }
+  }
+]
