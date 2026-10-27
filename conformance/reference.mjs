@@ -76,7 +76,7 @@ function activeHistory(facts, asOf) {
   const latest = new Map();
   const visible = new Map();
   const visibleValueChanges = new Map();
-  for (const fact of facts) {
+  for (const [index, fact] of facts.entries()) {
     validateFact(fact);
     if (ids.has(fact.fact_id)) throw new Error('duplicate fact identity');
     const old = latest.get(fact.observation_id);
@@ -110,7 +110,9 @@ function activeHistory(facts, asOf) {
     if (utcMicros(fact.received_at) <= asOf) {
       visible.set(fact.observation_id, fact);
       if (old && fact.value !== old.value) {
-        visibleValueChanges.set(fact.observation_id, utcMicros(fact.received_at));
+        visibleValueChanges.set(fact.observation_id, {
+          receivedAt: utcMicros(fact.received_at), appendIndex: index,
+        });
       }
     }
   }
@@ -154,10 +156,14 @@ export function evaluate({ market, facts, as_of }) {
   const count = corners.reduce((sum, f) => sum + f.value, 0);
   if (count !== closures[0].value) return pending('closure_count_mismatch');
   const closedAt = utcMicros(closures[0].received_at);
-  // Track visible value changes independently while folding the history. Equal
-  // totals can conceal offsetting corrections; later promotions do not erase them.
-  if (corners.some(f => snapshot.valueChanges.has(f.observation_id) &&
-      snapshot.valueChanges.get(f.observation_id) > closedAt)) {
+  const closureIndex = facts.findIndex(f => f.fact_id === closures[0].fact_id);
+  // Offset corrections can leave the same total. A later logged correction
+  // cannot be acknowledged by an earlier closure with an identical timestamp.
+  if (corners.some(f => {
+    const change = snapshot.valueChanges.get(f.observation_id);
+    return change && (change.receivedAt > closedAt ||
+      change.appendIndex > closureIndex);
+  })) {
     return pending('stale_closure');
   }
   return result('settled', count >= s.threshold ? 'over' : 'under', count, [],

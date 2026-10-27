@@ -49,6 +49,28 @@ class SettlementConformanceTests(unittest.TestCase):
     def test_380_match_synthetic_season_and_corrections(self) -> None:
         self.compare_rows(_fixtures.synthetic_season())
 
+    def test_equal_timestamp_closure_requires_later_append_order(self) -> None:
+        case = _fixtures.complete_case(1)
+        original, closed = case["facts"][0], case["facts"][-1]
+        second = _fixtures.fact("offsetting-record", value=0)
+        case["facts"].insert(-1, second)
+        stamp = "2026-11-04T08:00:00Z"
+        earlier_ack = _fixtures.revised(closed, 1, received_at=stamp)
+        case["facts"].extend([
+            earlier_ack,
+            _fixtures.revised(original, 0, received_at=stamp),
+            _fixtures.revised(second, 1, received_at=stamp),
+        ])
+        self.compare_rows([{"name": "tied_receipt_closure_first",
+                            "input": deepcopy(case),
+                            "expected": {"status": "pending", "outcome": None, "count": None,
+                                         "reasons": ["stale_closure"]}}])
+        case["facts"].append(_fixtures.revised(earlier_ack, 1, received_at=stamp))
+        self.compare_rows([{"name": "tied_receipt_closure_after",
+                            "input": case,
+                            "expected": {"status": "settled", "outcome": "under", "count": 1,
+                                         "reasons": []}}])
+
     def test_unrelated_event_and_period_do_not_change_result(self) -> None:
         case = _fixtures.complete_case(5)
         baseline = evaluate(case["market"], case["facts"], as_of=case["as_of"])
