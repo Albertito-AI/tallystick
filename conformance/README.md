@@ -34,8 +34,9 @@ finalisation and a second supported metric. Offsetting corrections require a fre
 closure even when their net count is unchanged; an evidence-state promotion alone
 does not. A separate regression compares both evaluators when a closure and
 later-appended offsetting corrections declare identical receipt timestamps.
-The closure remains stale until a new acknowledgement is appended. Additional tests check that unrelated
-events, unrelated periods and future corrections do not change an earlier
+The closure remains stale until a new acknowledgement is appended.
+Additional tests check that unrelated events, unrelated periods and future
+corrections do not change an earlier
 decision, and that independent observations can be reordered without changing
 the result.
 
