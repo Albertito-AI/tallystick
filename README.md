@@ -13,7 +13,34 @@ Existing products already use the name; no trade mark clearance is claimed.
 The repository became public on 26 October 2026. Independent user reproduction,
 the next versioned release and any customer pilot remain separate milestones.
 
+## See it in action
+
+Replay the supplied fictional match observations against a rule requiring at
+least five second-half corners. A correction reopens the result until the closure
+count agrees; a later correction changes the recorded outcome from over to under.
+
+![Observed Tallystick replay: pending, pending, over at six, pending after a correction, over at five, then under at four.](docs/demo/preview.svg)
+
+The illustration follows an executed six-stage replay. Its verifier accepted
+20 signed records and reproduced six decisions. This checks a synthetic recorder
+history; it authenticates no real sporting fact and performs no financial settlement.
+
+After installing the dependencies in [Run it](#run-it), use a fresh output directory:
+
+```sh
+PYTHONPATH=src python -m tallystick demo --output run/readme-demo
+```
+
+[Recorded results, verification command and limits](docs/demo/README.md) ·
+[Generated offline viewer](docs/demo/index.html) (open it from the checkout;
+GitHub displays its source).
+
+<details>
+<summary>Earlier dashboard preview</summary>
+
 ![Synthetic settlement review dashboard](docs/dashboard-preview.png)
+
+</details>
 
 [Validation run](https://github.com/Albertito-AI/tallystick/actions/runs/40320423727):
 all five jobs passed for implementation commit `28fb41c`, including Windows,
