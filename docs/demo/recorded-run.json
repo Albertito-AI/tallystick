@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "source_commit": "04502d4f1ec34ee52866c8441e12b0d4440d1309",
+  "source_url": "https://github.com/Albertito-AI/tallystick/tree/04502d4f1ec34ee52866c8441e12b0d4440d1309",
+  "recorded_date": "2026-10-28",
+  "synthetic": true,
+  "runtime": "CPython 3.12.14 on Linux x86_64",
+  "executed_command": "PYTHONPATH=src python -m tallystick demo --output <temporary-directory>",
+  "path_note": "The temporary output path is omitted; all displayed domain results are retained unchanged.",
+  "exit_status": 0,
+  "observed_stdout": {
+    "synthetic": true,
+    "entry_count": 20,
+    "verification": {
+      "valid": true,
+      "reasons": [],
+      "scope": "pinned recorder signature, complete log and reproducible synthetic decision",
+      "decision": {
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "settled",
+        "outcome": "under",
+        "count": 4,
+        "reasons": [],
+        "fact_ids": [
+          "closure-r3",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r2",
+          "corner-6-r2"
+        ]
+      },
+      "entries_verified": 20,
+      "decisions_verified": 6
+    },
+    "stages": [
+      {
+        "name": "Provisional observation",
+        "as_of": "2026-01-01T13:01:00Z",
+        "sequence": 3,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "pending",
+        "outcome": null,
+        "count": null,
+        "reasons": [
+          "missing_closure"
+        ],
+        "fact_ids": [
+          "corner-1-r1"
+        ]
+      },
+      {
+        "name": "Corroborated observation",
+        "as_of": "2026-01-01T13:01:00.625Z",
+        "sequence": 5,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "pending",
+        "outcome": null,
+        "count": null,
+        "reasons": [
+          "missing_closure"
+        ],
+        "fact_ids": [
+          "corner-1-r2"
+        ]
+      },
+      {
+        "name": "Official count of six",
+        "as_of": "2026-01-01T13:45:00Z",
+        "sequence": 13,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "settled",
+        "outcome": "over",
+        "count": 6,
+        "reasons": [],
+        "fact_ids": [
+          "closure-r1",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r1",
+          "corner-6-r1"
+        ]
+      },
+      {
+        "name": "Correction received before revised closure",
+        "as_of": "2026-01-01T14:00:00Z",
+        "sequence": 15,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "pending",
+        "outcome": null,
+        "count": null,
+        "reasons": [
+          "closure_count_mismatch"
+        ],
+        "fact_ids": [
+          "closure-r1",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r1",
+          "corner-6-r2"
+        ]
+      },
+      {
+        "name": "Corrected count of five",
+        "as_of": "2026-01-01T14:00:01Z",
+        "sequence": 17,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "settled",
+        "outcome": "over",
+        "count": 5,
+        "reasons": [],
+        "fact_ids": [
+          "closure-r2",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r1",
+          "corner-6-r2"
+        ]
+      },
+      {
+        "name": "Correction changes outcome to under",
+        "as_of": "2026-01-01T14:10:01Z",
+        "sequence": 20,
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "settled",
+        "outcome": "under",
+        "count": 4,
+        "reasons": [],
+        "fact_ids": [
+          "closure-r3",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r2",
+          "corner-6-r2"
+        ]
+      }
+    ]
+  },
+  "verifier_stdout": [
+    {
+      "valid": true,
+      "reasons": [],
+      "scope": "pinned recorder signature, complete log and reproducible synthetic decision",
+      "decision": {
+        "market_id": "demo-corners-h2-over-4.5",
+        "status": "settled",
+        "outcome": "under",
+        "count": 4,
+        "reasons": [],
+        "fact_ids": [
+          "closure-r3",
+          "corner-1-r3",
+          "corner-2-r1",
+          "corner-3-r1",
+          "corner-4-r1",
+          "corner-5-r2",
+          "corner-6-r2"
+        ]
+      },
+      "entries_verified": 20,
+      "decisions_verified": 6
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "index.html",
+      "sha256": "cd217fb4445b312433788bff0f649fc62fac646b27d8f1dd67bc41dcc6f4abd7"
+    },
+    {
+      "path": "dispute.json",
+      "sha256": "a3d213e863c2ab692ed6fa89ddb2d7de9b478128556d357b9b81f2bba79a3264"
+    },
+    {
+      "path": "public-key.txt",
+      "sha256": "063f642a35b8f1d7fb283b451dc247a63c31354093895dabb615d4fdc24eca69"
+    }
+  ],
+  "visual": "preview.svg is a static illustration of observed output, not a screenshot.",
+  "no_new_provider_calls_or_customer_data": true
+}

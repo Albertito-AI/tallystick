@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="630" viewBox="0 0 1120 630" role="img" aria-labelledby="title description">
+<title id="title">Tallystick: corrections reopen and then change a fictional market result</title>
+<desc id="description">The six observed stages are pending, pending, over at six, pending after a closure mismatch, over at five, and under at four. Verification checks 20 signed records and reproduces six synthetic decisions.</desc>
+<rect x="0" y="0" width="1120" height="630" rx="18" fill="#0b1523"/>
+<text x="42" y="35" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">TALLYSTICK / EXECUTED FICTIONAL MATCH REPLAY</text>
+<text x="42" y="78" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">A correction changes the answer. The history stays.</text>
+<text x="42" y="112" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400">Second-half corners · OVER means five or more · local synthetic observations</text>
+<text x="60" y="158" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">OBSERVATION AVAILABLE AT THIS STAGE</text>
+<text x="744" y="158" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">RESULT</text>
+<text x="960" y="158" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">COUNT</text>
+<rect x="42" y="180" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="213" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">01</text>
+<text x="108" y="213" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">One provisional observation; no closure</text>
+<text x="744" y="213" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">PENDING</text>
+<text x="982" y="213" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">—</text>
+<rect x="42" y="239" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="272" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">02</text>
+<text x="108" y="272" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">Two sources agree; still no closure</text>
+<text x="744" y="272" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">PENDING</text>
+<text x="982" y="272" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">—</text>
+<rect x="42" y="298" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="331" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">03</text>
+<text x="108" y="331" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">Six final corner observations + matching closure</text>
+<text x="744" y="331" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">OVER</text>
+<text x="982" y="331" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">6</text>
+<rect x="42" y="357" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="390" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">04</text>
+<text x="108" y="390" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">A correction arrives; closure still declares six</text>
+<text x="744" y="390" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">PENDING</text>
+<text x="982" y="390" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">—</text>
+<rect x="42" y="416" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="449" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">05</text>
+<text x="108" y="449" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">Closure revised to five</text>
+<text x="744" y="449" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">OVER</text>
+<text x="982" y="449" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">5</text>
+<rect x="42" y="475" width="1036" height="51" rx="10" fill="#122338"/>
+<text x="60" y="508" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">06</text>
+<text x="108" y="508" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400">Another correction + closure revised to four</text>
+<text x="744" y="508" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">UNDER</text>
+<text x="982" y="508" fill="#83cfff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">4</text>
+<text x="42" y="572" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400">Verifier result: valid = true · 20 signed records · 6 reproduced decisions</text>
+<text x="42" y="606" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">Recorded-example checks only. No sporting-truth authentication or real financial settlement.</text>
+</svg>

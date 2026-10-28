@@ -1,0 +1,1855 @@
+{
+  "body": {
+    "as_of": "2026-01-01T14:10:01Z",
+    "certificate": {
+      "payload": {
+        "coherence": "NOT_ASSESSED",
+        "harm": "simulation_only",
+        "integrity": "aggregate_requires_contextual_review",
+        "issued_at": "2026-01-01T12:00:00Z",
+        "licence_hash": "adf20ea551770cabf8313334813df2c9e14a9e7172f1c67f76ef50413dc22706",
+        "market": {
+          "batch_window_ms": 250,
+          "close_at": "2026-01-01T12:45:00Z",
+          "consumer": false,
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "jurisdiction": "TEST",
+          "licence_id": "synthetic-licence",
+          "market_id": "demo-corners-h2-over-4.5",
+          "name": "Fictional second-half corners over 4.5",
+          "outcomes": [
+            "over",
+            "under"
+          ],
+          "participant_scope": "aggregate",
+          "rulepack_id": "TEST-2026",
+          "schema_version": "0.1",
+          "settlement": {
+            "fact_type": "corner.awarded",
+            "min_state": "official",
+            "period": 2,
+            "threshold": 5
+          },
+          "window_seconds": 2700
+        },
+        "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+        "rights_check": {
+          "allowed": true,
+          "basis": "declared synthetic permissions",
+          "checked_at": "2026-01-01T12:00:00Z",
+          "licence_id": "synthetic-licence",
+          "reasons": [],
+          "territory": "TEST",
+          "use": "settlement"
+        },
+        "rulepack_hash": "e7906994eb934a2030f6862d5d47a090073507dab7f9a06b17fb9ab355bb1a64",
+        "rulepack_id": "TEST-2026",
+        "rulepack_version": "0.1.0",
+        "schema_version": "0.1",
+        "scope": "synthetic_replay_only",
+        "supporting_rights_checks": [
+          {
+            "check": {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T12:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            "fact_type": "period.closed"
+          },
+          {
+            "check": {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T12:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            "fact_type": "event.abandoned"
+          }
+        ],
+        "type": "tallystick.market-certificate"
+      },
+      "signature": "488995f4d47608d474a3b4f89da476e7360e8789cc69d93ac0cfdab6c5fe2f98efd5414dde1cfd3bbce50f259606254e013e9349d8d91efa703c5744c64c0b0d"
+    },
+    "checkpoint": {
+      "domain": "tallystick.checkpoint.v1",
+      "log_id": "tallystick-local",
+      "public_key": "a4aee1ae09fb20dba1e52dd41f73731b5022815bded726382341dfcbb43ffd8d",
+      "recorded_at": "2026-01-01T14:10:01Z",
+      "root_hash": "3983bd6c300d3dad039a7e776ccbe03b20d5b3b78a0d8d67c49d3b616ac5f4e2",
+      "signature": "439b93843386e1e401cbf1c485aecb8f14afe662b209d010a5359040ff5324a448f82f0a2d6c7023ee069a63e7b6719924f020a584874e72b17f910ab416580c",
+      "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698",
+      "tree_size": 20
+    },
+    "decision": {
+      "as_of": "2026-01-01T14:10:01Z",
+      "count": 4,
+      "fact_ids": [
+        "closure-r3",
+        "corner-1-r3",
+        "corner-2-r1",
+        "corner-3-r1",
+        "corner-4-r1",
+        "corner-5-r2",
+        "corner-6-r2"
+      ],
+      "market_id": "demo-corners-h2-over-4.5",
+      "name": "Correction changes outcome to under",
+      "outcome": "under",
+      "reasons": [],
+      "sequence": 20,
+      "status": "settled"
+    },
+    "decision_sequence": 20,
+    "entries": [
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "a5c5bbd7298924dfb27c4d1cfda099879e9f1656563678dba28627d73f33e52a",
+        "idempotency_key": "certificate:demo-corners-h2-over-4.5",
+        "kind": "market-certificate",
+        "log_id": "tallystick-local",
+        "payload": {
+          "payload": {
+            "coherence": "NOT_ASSESSED",
+            "harm": "simulation_only",
+            "integrity": "aggregate_requires_contextual_review",
+            "issued_at": "2026-01-01T12:00:00Z",
+            "licence_hash": "adf20ea551770cabf8313334813df2c9e14a9e7172f1c67f76ef50413dc22706",
+            "market": {
+              "batch_window_ms": 250,
+              "close_at": "2026-01-01T12:45:00Z",
+              "consumer": false,
+              "correction_deadline": "2026-01-02T14:00:00Z",
+              "event_id": "synthetic-match-001",
+              "jurisdiction": "TEST",
+              "licence_id": "synthetic-licence",
+              "market_id": "demo-corners-h2-over-4.5",
+              "name": "Fictional second-half corners over 4.5",
+              "outcomes": [
+                "over",
+                "under"
+              ],
+              "participant_scope": "aggregate",
+              "rulepack_id": "TEST-2026",
+              "schema_version": "0.1",
+              "settlement": {
+                "fact_type": "corner.awarded",
+                "min_state": "official",
+                "period": 2,
+                "threshold": 5
+              },
+              "window_seconds": 2700
+            },
+            "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+            "rights_check": {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T12:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            "rulepack_hash": "e7906994eb934a2030f6862d5d47a090073507dab7f9a06b17fb9ab355bb1a64",
+            "rulepack_id": "TEST-2026",
+            "rulepack_version": "0.1.0",
+            "schema_version": "0.1",
+            "scope": "synthetic_replay_only",
+            "supporting_rights_checks": [
+              {
+                "check": {
+                  "allowed": true,
+                  "basis": "declared synthetic permissions",
+                  "checked_at": "2026-01-01T12:00:00Z",
+                  "licence_id": "synthetic-licence",
+                  "reasons": [],
+                  "territory": "TEST",
+                  "use": "settlement"
+                },
+                "fact_type": "period.closed"
+              },
+              {
+                "check": {
+                  "allowed": true,
+                  "basis": "declared synthetic permissions",
+                  "checked_at": "2026-01-01T12:00:00Z",
+                  "licence_id": "synthetic-licence",
+                  "reasons": [],
+                  "territory": "TEST",
+                  "use": "settlement"
+                },
+                "fact_type": "event.abandoned"
+              }
+            ],
+            "type": "tallystick.market-certificate"
+          },
+          "signature": "488995f4d47608d474a3b4f89da476e7360e8789cc69d93ac0cfdab6c5fe2f98efd5414dde1cfd3bbce50f259606254e013e9349d8d91efa703c5744c64c0b0d"
+        },
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "recorded_at": "2026-01-01T12:00:00Z",
+        "sequence": 1,
+        "signature": "657e8914640da29eee627c18eed2548add8ced8aa1f7b52ae93ed6e0a2f7dff17154e27fb976c99574c8098c57f595a3df5d483619308f51eb21a84ee655b90e",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "33b3dafd821a7ce4c9359ecc821071bf379311493ba5a80a9de24b1382206896",
+        "idempotency_key": "fact:corner-1-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-1-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-1",
+          "occurred_at": "2026-01-01T13:01:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:01:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-feed-a"
+          ],
+          "state": "provisional",
+          "subject": "home",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "a5c5bbd7298924dfb27c4d1cfda099879e9f1656563678dba28627d73f33e52a",
+        "recorded_at": "2026-01-01T13:01:00Z",
+        "sequence": 2,
+        "signature": "b1550826641adaac90028c5e0575eda55415df866bb1e3b0eae5c9cdd6c183d7a7f3407164a833b8d3df1e31a0d7ee2ccae5ca0a28ad34ec8cec1447f1bc8501",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "1efd14736a1259ecdfc849b5eb9d5fab64cc293e85f7971c5820c6c20590c1f8",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:0",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T13:01:00Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": null,
+            "fact_ids": [
+              "corner-1-r1"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": null,
+            "reasons": [
+              "missing_closure"
+            ],
+            "status": "pending"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "33b3dafd821a7ce4c9359ecc821071bf379311493ba5a80a9de24b1382206896",
+        "recorded_at": "2026-01-01T13:01:00Z",
+        "sequence": 3,
+        "signature": "d522d7e9e8458fe6d602acba4a2366f452c934aafea94711841db7c299509c3858db44ed96b672ab2d46359aa800a5b3bed95ade09be48cfd9aa1dafaa29300d",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "7ae6fdf9e4096cd19ae5b1de9ff998606021a5438373c781837782aaaaa72401",
+        "idempotency_key": "fact:corner-1-r2",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-1-r2",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-1",
+          "occurred_at": "2026-01-01T13:01:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:01:00.625Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-feed-a",
+            "demo-feed-b"
+          ],
+          "state": "corroborated",
+          "subject": "home",
+          "supersedes": "corner-1-r1",
+          "value": 1
+        },
+        "previous_hash": "1efd14736a1259ecdfc849b5eb9d5fab64cc293e85f7971c5820c6c20590c1f8",
+        "recorded_at": "2026-01-01T13:01:00.625Z",
+        "sequence": 4,
+        "signature": "08973bbae66634a7425f193e5a4e097875399a5482f8a657a962fc2f3e26a5253dbc9fad1f3133c2c93f6bf40b46bc7991ca10000addfdf869c2427af21b8b06",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "57bec4d4a275bb6ae64b2d3940f523b7fcedf25eb4d9e64613c63591bd1f0a2e",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:1",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T13:01:00.625Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": null,
+            "fact_ids": [
+              "corner-1-r2"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": null,
+            "reasons": [
+              "missing_closure"
+            ],
+            "status": "pending"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00.625Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00.625Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00.625Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:01:00.625Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "7ae6fdf9e4096cd19ae5b1de9ff998606021a5438373c781837782aaaaa72401",
+        "recorded_at": "2026-01-01T13:01:00.625Z",
+        "sequence": 5,
+        "signature": "ab8ffd4b502d3eb1e25e63034180504bb9a4ee2fbf8ea52c0f5b084bd58043f5423e46402402f940f5c2f4384c4de6e3fa0c6f8d1ed80c8c936a813add770207",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "0c4f23510491f563718bb3b7c0095909b6437079cc432170411ea4cd3fc80b32",
+        "idempotency_key": "fact:corner-1-r3",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-1-r3",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-1",
+          "occurred_at": "2026-01-01T13:01:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:01:02Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "home",
+          "supersedes": "corner-1-r2",
+          "value": 1
+        },
+        "previous_hash": "57bec4d4a275bb6ae64b2d3940f523b7fcedf25eb4d9e64613c63591bd1f0a2e",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 6,
+        "signature": "32549ec417614094358c1cae4ee2f74c7b541843adc511854a81feef476cfd6294f0ffa6406bbfc8d232bbac4c8b13c013a7ddd38b353b645baff07f5fc8ad02",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "a4fff39b0ea5c6627f3d40574d3810de669e9c0482337f680111a586dbda0957",
+        "idempotency_key": "fact:corner-2-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-2-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-2",
+          "occurred_at": "2026-01-01T13:02:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:02:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "away",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "0c4f23510491f563718bb3b7c0095909b6437079cc432170411ea4cd3fc80b32",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 7,
+        "signature": "8842121cf7a709a3bee69ec366829e37e73a83b6954f26f523d9a9973556de286dea807e1b2ee81d7456bae22781cee73decbb74f058ad398cfce67afa139808",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "f6d6c5fbf8396706b45fd8806a44bcf1874e98c5db9060b29807e8856ac2bb99",
+        "idempotency_key": "fact:corner-3-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-3-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-3",
+          "occurred_at": "2026-01-01T13:03:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:03:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "home",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "a4fff39b0ea5c6627f3d40574d3810de669e9c0482337f680111a586dbda0957",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 8,
+        "signature": "cd6d4b6c9701d10a9b17f09d301c7b2618e82ef083e28ca356e45a9550e24bb0d71dcc68433178e04061b6cc14810259c1b44f54970396cab82c8f0d3a4a6700",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "2658d6816ce310718657c826b9aa7db55ebbbac61b993dc37b9b485636770cd0",
+        "idempotency_key": "fact:corner-4-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-4-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-4",
+          "occurred_at": "2026-01-01T13:04:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:04:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "away",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "f6d6c5fbf8396706b45fd8806a44bcf1874e98c5db9060b29807e8856ac2bb99",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 9,
+        "signature": "dfa112f5ec7eddfee48c74eb9f70af51928c669478ecd49e4deab021902d38eb8605b10b492b8c761cc52dd3e84873831dd8de980b40ed3828acfd1be5be7c0c",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "c45080ad9b027bad3f510346efc4c38f53011d7aeec41ffdab4d50609095ff29",
+        "idempotency_key": "fact:corner-5-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-5-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-5",
+          "occurred_at": "2026-01-01T13:05:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:05:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "home",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "2658d6816ce310718657c826b9aa7db55ebbbac61b993dc37b9b485636770cd0",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 10,
+        "signature": "427540e9c35a47ec645584c941559cb4b70ba91d37f8391ddbd6128dd68f00f4c9c2e3cca1179a2826b0655f118f80bfe6929ed4003fd041382c2d7c1851b70d",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "9f8ed691a596e315cbbb6d299d4bd97ea63e479fdc976c0506679468d5f1aa0e",
+        "idempotency_key": "fact:corner-6-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-6-r1",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-6",
+          "occurred_at": "2026-01-01T13:06:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:06:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "away",
+          "supersedes": null,
+          "value": 1
+        },
+        "previous_hash": "c45080ad9b027bad3f510346efc4c38f53011d7aeec41ffdab4d50609095ff29",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 11,
+        "signature": "8831f80374cfe6d9979036dedd172d960bf72bb0a3275dca1962e11cd2bb15519331e57cf51906b6fbe4306d9a0a13251b142be640dc10d46f0f823d3ef2f60f",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "c074207d8fad7da8b3d7d369a55e6075bc8272d2e30d36ac85809dbcd4fb3d08",
+        "idempotency_key": "fact:closure-r1",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "closure-r1",
+          "kind": "period.closed",
+          "licence_id": "synthetic-licence",
+          "metric": "corner.awarded",
+          "observation_id": "period-2-closure",
+          "occurred_at": "2026-01-01T13:45:00Z",
+          "period": 2,
+          "reason": null,
+          "received_at": "2026-01-01T13:45:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "all",
+          "supersedes": null,
+          "value": 6
+        },
+        "previous_hash": "9f8ed691a596e315cbbb6d299d4bd97ea63e479fdc976c0506679468d5f1aa0e",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 12,
+        "signature": "268e44f6183c2f57db234021069e32997abc6ea82ef24ad4a3f5992bf3c8ecd76b1981f042f34988cfc34e9f8478be49f3b50f9d9384d7a2df07b39e1d18790f",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "957b9d0461a24c764936589ec02b2bb8c6ba218d934e308052b30e4d20790da3",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:2",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T13:45:00Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": 6,
+            "fact_ids": [
+              "closure-r1",
+              "corner-1-r3",
+              "corner-2-r1",
+              "corner-3-r1",
+              "corner-4-r1",
+              "corner-5-r1",
+              "corner-6-r1"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": "over",
+            "reasons": [],
+            "status": "settled"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T13:45:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "c074207d8fad7da8b3d7d369a55e6075bc8272d2e30d36ac85809dbcd4fb3d08",
+        "recorded_at": "2026-01-01T13:45:00Z",
+        "sequence": 13,
+        "signature": "69590679f17db2003516708c6c1c686642a60356fb189f0b83be3a3736760b03366d8654a4829fc7365f396c35a8e8dc085fc9d414e1d80a183010e8fa1e0c02",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "b639d3524723f9ca6f765ecaafc47cf86e15dbd5fccc962615e84b632976d419",
+        "idempotency_key": "fact:corner-6-r2",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-6-r2",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-6",
+          "occurred_at": "2026-01-01T13:06:00Z",
+          "period": 2,
+          "reason": "Fictional reclassification to a goal kick",
+          "received_at": "2026-01-01T14:00:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "away",
+          "supersedes": "corner-6-r1",
+          "value": 0
+        },
+        "previous_hash": "957b9d0461a24c764936589ec02b2bb8c6ba218d934e308052b30e4d20790da3",
+        "recorded_at": "2026-01-01T14:00:00Z",
+        "sequence": 14,
+        "signature": "a7bb4296af0159040bcbb8f44ccceca17ecc742ca171c1db6b30ee2d1e0bd6234f35a9c9dec293bd16226b83ea0dbc1a9c272b3d851a6b17fd3ad567771ee902",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "385de225641f10118af0e83485ceb38239871865d38832bd861000202f393a99",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:3",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T14:00:00Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": null,
+            "fact_ids": [
+              "closure-r1",
+              "corner-1-r3",
+              "corner-2-r1",
+              "corner-3-r1",
+              "corner-4-r1",
+              "corner-5-r1",
+              "corner-6-r2"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": null,
+            "reasons": [
+              "closure_count_mismatch"
+            ],
+            "status": "pending"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:00Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "b639d3524723f9ca6f765ecaafc47cf86e15dbd5fccc962615e84b632976d419",
+        "recorded_at": "2026-01-01T14:00:00Z",
+        "sequence": 15,
+        "signature": "d5232894ff8207b532f36410fe109f055616831e0c3cce06b0d2cb45bbd5a14fd84a9936f27e8ba62a995debcb7c4c4466dd51ea9a1abb42039efac63e695202",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "8e1409e8d65aac13671aed801235af67d7bd1c01fbff7777e506e546f053bdb2",
+        "idempotency_key": "fact:closure-r2",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "closure-r2",
+          "kind": "period.closed",
+          "licence_id": "synthetic-licence",
+          "metric": "corner.awarded",
+          "observation_id": "period-2-closure",
+          "occurred_at": "2026-01-01T13:45:00Z",
+          "period": 2,
+          "reason": "Fictional corrected authoritative count",
+          "received_at": "2026-01-01T14:00:01Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "all",
+          "supersedes": "closure-r1",
+          "value": 5
+        },
+        "previous_hash": "385de225641f10118af0e83485ceb38239871865d38832bd861000202f393a99",
+        "recorded_at": "2026-01-01T14:00:01Z",
+        "sequence": 16,
+        "signature": "1206f944139fb6d7c259883e136aba805d0527a8ecc926dfcb65e308ed77bf35974659f4bae43f1878522cd7b7027dbfb91de951c7c3140371f19d31150e8e05",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "ec0fe73f02c03eccfdb42b05dd14489a0e06f4ad91514c6ca7d50ece4af2acfc",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:4",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T14:00:01Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": 5,
+            "fact_ids": [
+              "closure-r2",
+              "corner-1-r3",
+              "corner-2-r1",
+              "corner-3-r1",
+              "corner-4-r1",
+              "corner-5-r1",
+              "corner-6-r2"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": "over",
+            "reasons": [],
+            "status": "settled"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:00:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "8e1409e8d65aac13671aed801235af67d7bd1c01fbff7777e506e546f053bdb2",
+        "recorded_at": "2026-01-01T14:00:01Z",
+        "sequence": 17,
+        "signature": "9a438244496caf12ec416f2b35103863db1c86a1d4f9be512ea55ead100ff59631f6d915ddfc6c720fba9e05badb26114a0b6bf6cef38f1db6f851244eb29a04",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "4c323947f98bdf71e86ce3e2cd9e9d32bb3f4ffb792d52fc3fae55f165aab000",
+        "idempotency_key": "fact:corner-5-r2",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "corner-5-r2",
+          "kind": "corner.awarded",
+          "licence_id": "synthetic-licence",
+          "metric": null,
+          "observation_id": "corner-5",
+          "occurred_at": "2026-01-01T13:05:00Z",
+          "period": 2,
+          "reason": "Second fictional reclassification",
+          "received_at": "2026-01-01T14:10:00Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "home",
+          "supersedes": "corner-5-r1",
+          "value": 0
+        },
+        "previous_hash": "ec0fe73f02c03eccfdb42b05dd14489a0e06f4ad91514c6ca7d50ece4af2acfc",
+        "recorded_at": "2026-01-01T14:10:01Z",
+        "sequence": 18,
+        "signature": "27597fd754d4b99e18c1a0338c0bd49f4f817fcaac2902f550defd5765e77f2550e57218ede5672cf19fe93c07f32f93d9559e3c1589da50ed0647406b7ebf0e",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "e1dd9b13249c8aa898647947a7c06b06cf224184e7aec001d5832049a0928251",
+        "idempotency_key": "fact:closure-r3",
+        "kind": "fact",
+        "log_id": "tallystick-local",
+        "payload": {
+          "correction_deadline": "2026-01-02T14:00:00Z",
+          "event_id": "synthetic-match-001",
+          "fact_id": "closure-r3",
+          "kind": "period.closed",
+          "licence_id": "synthetic-licence",
+          "metric": "corner.awarded",
+          "observation_id": "period-2-closure",
+          "occurred_at": "2026-01-01T13:45:00Z",
+          "period": 2,
+          "reason": "Fictional corrected authoritative count",
+          "received_at": "2026-01-01T14:10:01Z",
+          "schema_version": "0.1",
+          "source_ids": [
+            "demo-official"
+          ],
+          "state": "official",
+          "subject": "all",
+          "supersedes": "closure-r2",
+          "value": 4
+        },
+        "previous_hash": "4c323947f98bdf71e86ce3e2cd9e9d32bb3f4ffb792d52fc3fae55f165aab000",
+        "recorded_at": "2026-01-01T14:10:01Z",
+        "sequence": 19,
+        "signature": "1f0b91227477146211f23fcb5909ace569a745450c0be72afd383cc59f515ca7cd30aad04658ce018a5546bec00cca2a86cde62b46d5291e3773e8cdaea1dd0d",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      },
+      {
+        "domain": "tallystick.entry.v1",
+        "entry_hash": "98632f19074ea1743e6e4dacc697fb586939c3be549feb61279a21fecc8941d0",
+        "idempotency_key": "decision:demo-corners-h2-over-4.5:5",
+        "kind": "settlement-decision",
+        "log_id": "tallystick-local",
+        "payload": {
+          "as_of": "2026-01-01T14:10:01Z",
+          "market_hash": "c6a13a4f1edda894471621dface373c592b74a7ba82d89ed5c55acfe1147ed3b",
+          "result": {
+            "count": 4,
+            "fact_ids": [
+              "closure-r3",
+              "corner-1-r3",
+              "corner-2-r1",
+              "corner-3-r1",
+              "corner-4-r1",
+              "corner-5-r2",
+              "corner-6-r2"
+            ],
+            "market_id": "demo-corners-h2-over-4.5",
+            "outcome": "under",
+            "reasons": [],
+            "status": "settled"
+          },
+          "rights_checks": [
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            },
+            {
+              "allowed": true,
+              "basis": "declared synthetic permissions",
+              "checked_at": "2026-01-01T14:10:01Z",
+              "licence_id": "synthetic-licence",
+              "reasons": [],
+              "territory": "TEST",
+              "use": "settlement"
+            }
+          ]
+        },
+        "previous_hash": "e1dd9b13249c8aa898647947a7c06b06cf224184e7aec001d5832049a0928251",
+        "recorded_at": "2026-01-01T14:10:01Z",
+        "sequence": 20,
+        "signature": "ae8905f5001a826ebd7a3be374d622125909f720a5cff74a867dd27c3ff77fa30e2e43cfb40a9db3d6f6a4458aa16693b7ef53a2312b3788fc07d329eb194c07",
+        "source_registry_hash": "997d520dde811156d4b3ab92724916d6e8bc87b33ea3bfb93ec9f37678cd3698"
+      }
+    ],
+    "licences": [
+      {
+        "fact_types": [
+          "corner.awarded",
+          "goal.scored",
+          "period.closed",
+          "event.abandoned"
+        ],
+        "licence_id": "synthetic-licence",
+        "schema_version": "0.1",
+        "source_ids": [
+          "demo-feed-a",
+          "demo-feed-b",
+          "demo-official"
+        ],
+        "synthetic": true,
+        "territories": [
+          "TEST"
+        ],
+        "uses": [
+          "display",
+          "pricing",
+          "settlement",
+          "redistribution"
+        ],
+        "valid_from": "2026-01-01T00:00:00Z",
+        "valid_until": "2027-01-01T00:00:00Z"
+      }
+    ],
+    "market": {
+      "batch_window_ms": 250,
+      "close_at": "2026-01-01T12:45:00Z",
+      "consumer": false,
+      "correction_deadline": "2026-01-02T14:00:00Z",
+      "event_id": "synthetic-match-001",
+      "jurisdiction": "TEST",
+      "licence_id": "synthetic-licence",
+      "market_id": "demo-corners-h2-over-4.5",
+      "name": "Fictional second-half corners over 4.5",
+      "outcomes": [
+        "over",
+        "under"
+      ],
+      "participant_scope": "aggregate",
+      "rulepack_id": "TEST-2026",
+      "schema_version": "0.1",
+      "settlement": {
+        "fact_type": "corner.awarded",
+        "min_state": "official",
+        "period": 2,
+        "threshold": 5
+      },
+      "window_seconds": 2700
+    },
+    "proofs": [
+      {
+        "audit_path": [
+          {
+            "hash": "de9f2aa5bd47a0c726fcc5767d3abfd73a6d7da17a65964ded19a4ecb48d324b",
+            "side": "right"
+          },
+          {
+            "hash": "73f8a1c6c17ce146972795ab961158f82e49e56ef35c42317850bd2972d2fe5a",
+            "side": "right"
+          },
+          {
+            "hash": "821672c6ffe761e017bdb106c39d5e4cb04f9545ee7399c0ae1a9f5ffc4e36f3",
+            "side": "right"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 0,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "685d1e1fe878eb4920c4bb63dc7bf1691c7d8fc3ef061e08646b4df1caba3cf0",
+            "side": "left"
+          },
+          {
+            "hash": "73f8a1c6c17ce146972795ab961158f82e49e56ef35c42317850bd2972d2fe5a",
+            "side": "right"
+          },
+          {
+            "hash": "821672c6ffe761e017bdb106c39d5e4cb04f9545ee7399c0ae1a9f5ffc4e36f3",
+            "side": "right"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 1,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "5a9101cc9da0c1d6ee18d4c90584a944c3f32b9432e7b49e0161cc601d79e2dd",
+            "side": "right"
+          },
+          {
+            "hash": "147581a843b546c578559d38ce7c3caa078d9f30f3ff27a8f621081e71909c6e",
+            "side": "left"
+          },
+          {
+            "hash": "821672c6ffe761e017bdb106c39d5e4cb04f9545ee7399c0ae1a9f5ffc4e36f3",
+            "side": "right"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 2,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "4b84a1fc0b9011a34a027f7b18b56e1ea4f3fc41cfb736337441821e6060fd90",
+            "side": "left"
+          },
+          {
+            "hash": "147581a843b546c578559d38ce7c3caa078d9f30f3ff27a8f621081e71909c6e",
+            "side": "left"
+          },
+          {
+            "hash": "821672c6ffe761e017bdb106c39d5e4cb04f9545ee7399c0ae1a9f5ffc4e36f3",
+            "side": "right"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 3,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "8dd5d5dcedc690a9fca9347362edea4f286c625b35763b62972bf52d5121af0d",
+            "side": "right"
+          },
+          {
+            "hash": "965b01ca90497858bd9a52af0dfd6ae480dae806b10368932657b7d93bceb8a1",
+            "side": "right"
+          },
+          {
+            "hash": "46e88adb561b31c37f6c0e38cbafccafd8fd5730be500a8d55f738a1600872e8",
+            "side": "left"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 4,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "0ce3dd006275d0c4bf04d3dec1d5a27475c0da95e58497f63ff035171901e3b5",
+            "side": "left"
+          },
+          {
+            "hash": "965b01ca90497858bd9a52af0dfd6ae480dae806b10368932657b7d93bceb8a1",
+            "side": "right"
+          },
+          {
+            "hash": "46e88adb561b31c37f6c0e38cbafccafd8fd5730be500a8d55f738a1600872e8",
+            "side": "left"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 5,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "de039af6c3bdc034acbe3430beaac16894f67458dad7871d267e28ed43a9cd0c",
+            "side": "right"
+          },
+          {
+            "hash": "4f988f88c1c4436b0f0b0cd614d20aef7b8682c06832107426e556042a18f81f",
+            "side": "left"
+          },
+          {
+            "hash": "46e88adb561b31c37f6c0e38cbafccafd8fd5730be500a8d55f738a1600872e8",
+            "side": "left"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 6,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "e58e9896125f08ae2f534f9a2ff6ea0afcbe3ea65be212c5b2a70268c01dfd34",
+            "side": "left"
+          },
+          {
+            "hash": "4f988f88c1c4436b0f0b0cd614d20aef7b8682c06832107426e556042a18f81f",
+            "side": "left"
+          },
+          {
+            "hash": "46e88adb561b31c37f6c0e38cbafccafd8fd5730be500a8d55f738a1600872e8",
+            "side": "left"
+          },
+          {
+            "hash": "c475a2f6984f9df479b197cb723543965a0f2620fffb589d4ee42fae0bc15599",
+            "side": "right"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 7,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "2e2b63cbffa63ebdaca9027cb1c55470fdd27fd50a936b9a8d7b31eb61c3fdf3",
+            "side": "right"
+          },
+          {
+            "hash": "193b43e68b570ca22ec4e4a91434d30cb07351fffd8349259e4e9a8acdfb589b",
+            "side": "right"
+          },
+          {
+            "hash": "bd48606386624096385d63aea72efc31e29cf55a6832c4997bff866bc819d313",
+            "side": "right"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 8,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "b5d5832aef2d8587d6853e97540697c14048a822cf931aaa30fc2f0dae578d9c",
+            "side": "left"
+          },
+          {
+            "hash": "193b43e68b570ca22ec4e4a91434d30cb07351fffd8349259e4e9a8acdfb589b",
+            "side": "right"
+          },
+          {
+            "hash": "bd48606386624096385d63aea72efc31e29cf55a6832c4997bff866bc819d313",
+            "side": "right"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 9,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "6c473dafd038657fc87f75f3aaa132ee7b30569f123d756c94833a73ed68f6ab",
+            "side": "right"
+          },
+          {
+            "hash": "1308ca17d2933f4ed5daecc591dd5b30680cb1672da916fc411528f17a716804",
+            "side": "left"
+          },
+          {
+            "hash": "bd48606386624096385d63aea72efc31e29cf55a6832c4997bff866bc819d313",
+            "side": "right"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 10,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "cb90f98824c7e025b68066542d5ea9026dbb6ad6e57c75dd7243f8171f7d0ab5",
+            "side": "left"
+          },
+          {
+            "hash": "1308ca17d2933f4ed5daecc591dd5b30680cb1672da916fc411528f17a716804",
+            "side": "left"
+          },
+          {
+            "hash": "bd48606386624096385d63aea72efc31e29cf55a6832c4997bff866bc819d313",
+            "side": "right"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 11,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "4d27047f59742b2dc32f5a38523ed0c5b62ae1939a48b72b4936b509cded28c5",
+            "side": "right"
+          },
+          {
+            "hash": "f46c8107d5d44c4607937afc7fc19b6f62a55e12708b6bdfaa569f9b4ff0cfb4",
+            "side": "right"
+          },
+          {
+            "hash": "9bb3067824384e3acc693dfd4436f3100cafef207706cf8e7c65e6afb02312f7",
+            "side": "left"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 12,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "9c48936ddb709b88517fe133b3be5d0ac9362fd1eec91627d985ac89c226c117",
+            "side": "left"
+          },
+          {
+            "hash": "f46c8107d5d44c4607937afc7fc19b6f62a55e12708b6bdfaa569f9b4ff0cfb4",
+            "side": "right"
+          },
+          {
+            "hash": "9bb3067824384e3acc693dfd4436f3100cafef207706cf8e7c65e6afb02312f7",
+            "side": "left"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 13,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "38690cb28728dd9395a7758f79c886144c543b21df46e55698652169e19ea221",
+            "side": "right"
+          },
+          {
+            "hash": "f23cd652d99dfda1227a72b117347bbef3605c1bd2596d24ade7e2363fc5eedc",
+            "side": "left"
+          },
+          {
+            "hash": "9bb3067824384e3acc693dfd4436f3100cafef207706cf8e7c65e6afb02312f7",
+            "side": "left"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 14,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "82f26bd336b0d744762e476e5b169770b6cbbf3d874f1dac6128409c11161f97",
+            "side": "left"
+          },
+          {
+            "hash": "f23cd652d99dfda1227a72b117347bbef3605c1bd2596d24ade7e2363fc5eedc",
+            "side": "left"
+          },
+          {
+            "hash": "9bb3067824384e3acc693dfd4436f3100cafef207706cf8e7c65e6afb02312f7",
+            "side": "left"
+          },
+          {
+            "hash": "82af4d8681f7e48295ea75faa43674438e2310ead4ac32aef39f2b9c3e543842",
+            "side": "left"
+          },
+          {
+            "hash": "94f9f8f534abff87295d026d9c6390f3c7987c91e50f8872bc47a5bd049c921c",
+            "side": "right"
+          }
+        ],
+        "index": 15,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "a80a22971575d56d5acf85accb9045509c3997ad64c605063565430fdb7abbfb",
+            "side": "right"
+          },
+          {
+            "hash": "345de84ce58aab788ac3f7ca1fb25c24a680ac3cf39cce90dfcb3a21c00385e4",
+            "side": "right"
+          },
+          {
+            "hash": "36573bb9092312da0b04f1ed538da21ce16851380544bc5e0046702c8d301e7e",
+            "side": "left"
+          }
+        ],
+        "index": 16,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "4d1f8edba9336bb0c2f539fbc35cbb6afd13a21f323f64b510407996be2f200b",
+            "side": "left"
+          },
+          {
+            "hash": "345de84ce58aab788ac3f7ca1fb25c24a680ac3cf39cce90dfcb3a21c00385e4",
+            "side": "right"
+          },
+          {
+            "hash": "36573bb9092312da0b04f1ed538da21ce16851380544bc5e0046702c8d301e7e",
+            "side": "left"
+          }
+        ],
+        "index": 17,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "ed682ebe82b5df68709a80b6438a41d9b0931005ac6f43a6a93299dfe9c71a76",
+            "side": "right"
+          },
+          {
+            "hash": "477dc1c7555c7f4b7388dd74cb215ec4585ee5b5272f65548e6655039ef59544",
+            "side": "left"
+          },
+          {
+            "hash": "36573bb9092312da0b04f1ed538da21ce16851380544bc5e0046702c8d301e7e",
+            "side": "left"
+          }
+        ],
+        "index": 18,
+        "tree_size": 20
+      },
+      {
+        "audit_path": [
+          {
+            "hash": "229124aa6c98641a3def55459bb17c0b25c171c18b4827e370401469ad36fe5b",
+            "side": "left"
+          },
+          {
+            "hash": "477dc1c7555c7f4b7388dd74cb215ec4585ee5b5272f65548e6655039ef59544",
+            "side": "left"
+          },
+          {
+            "hash": "36573bb9092312da0b04f1ed538da21ce16851380544bc5e0046702c8d301e7e",
+            "side": "left"
+          }
+        ],
+        "index": 19,
+        "tree_size": 20
+      }
+    ],
+    "rulepacks": [
+      {
+        "allow_consumer": false,
+        "allowed_fact_types": [
+          "corner.awarded",
+          "goal.scored"
+        ],
+        "basis": "synthetic",
+        "jurisdiction": "TEST",
+        "min_window_seconds": 900,
+        "required_state": "official",
+        "reviewed_at": "2025-12-31T00:00:00Z",
+        "reviewer": "Fictional test-policy author",
+        "rulepack_id": "TEST-2026",
+        "schema_version": "0.1",
+        "valid_from": "2026-01-01T00:00:00Z",
+        "valid_until": "2027-01-01T00:00:00Z",
+        "version": "0.1.0"
+      }
+    ],
+    "schema_version": "0.1",
+    "scope": "local_recorder_evidence_only",
+    "sources": {
+      "demo-feed-a": {
+        "independence_group": "fictional-a",
+        "official_kinds": []
+      },
+      "demo-feed-b": {
+        "independence_group": "fictional-b",
+        "official_kinds": []
+      },
+      "demo-official": {
+        "independence_group": "fictional-official",
+        "official_kinds": [
+          "corner.awarded",
+          "goal.scored",
+          "period.closed",
+          "event.abandoned"
+        ]
+      }
+    },
+    "synthetic": true,
+    "type": "tallystick.dispute-bundle"
+  },
+  "manifest": {
+    "bundle_sha256": "2db4d9da9dba92bfb3fda110071b72a29078a7f52720b1665bf126fab54a6c8c",
+    "domain": "tallystick.dispute-manifest.v1"
+  },
+  "signature": "d4ca6b63005992c085bd149bdad2a94ebb8afd02309ecc178a93f87b9670b93cea077e14a7db3d7638cf0b828b381930b0a6f5aa552420e661b989ce096a3e07"
+}
