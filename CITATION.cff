@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the version or commit of Tallystick that you actually use. Executable code and documentation are Apache-2.0; original schemas and format definitions under spec/ are CC BY 4.0. Consult LICENSE, NOTICE and spec/LICENSE for their separate scopes."
+type: software
+title: "Tallystick"
+authors:
+  - family-names: "Tan"
+    given-names: "Sin Hon Albert"
+    orcid: "https://orcid.org/0009-0001-8996-7933"
+version: "0.1.0"
+repository-code: "https://github.com/Albertito-AI/tallystick"
+url: "https://github.com/Albertito-AI/tallystick"
+abstract: "A research workbench for sports fact provenance, settlement replay and market-rule checks using synthetic data. It records fictional corrections and exports verifiable recorder evidence; it authenticates no real sporting fact and performs no financial settlement."
