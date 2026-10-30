@@ -45,8 +45,8 @@ marked "inspect" is **not** a claimed passing test.
 | --- | --- | --- | --- |
 | R01 | Closure logged before two offsetting value corrections, all with equal receipt timestamps; aggregate unchanged | `pending/stale_closure` | New Python and independent JS regression in PR #1 |
 | R02 | Fresh same-count closure revision logged after both corrections, also at the tied timestamp | `settled` if other gates pass | New regression in PR #1 |
-| R03 | Closure logged after corrections, but its receipt timestamp is earlier than a correction's | `pending/stale_closure` | Inspect as an additional distinct ordering-axis test |
-| R04 | Closure logged before a later appended correction, but the closure has a later declared receipt timestamp | `pending/stale_closure` | Inspect delayed-arrival behaviour |
+| R03 | Closure logged after corrections, but its receipt timestamp is earlier than a correction's | `pending/stale_closure` | Provisional Python/independent JavaScript regression added 30 October; semantic review pending |
+| R04 | Closure logged before a later appended correction, but the closure has a later declared receipt timestamp | `pending/stale_closure` | Provisional Python/independent JavaScript regression added 30 October; delayed-import interpretation remains open |
 | R05 | Only an evidence-state promotion follows closure, with no value change | Unchanged settlement if other gates pass | Existing state-promotion tests |
 | R06 | A related value-changing correction is beyond the `as_of` receipt cutoff | Earlier historical result remains available | Existing historical replay tests; examine clock/append assumptions |
 | R07 | Closure count and active occurrence sum disagree | `pending/closure_count_mismatch` before freshness check | Existing precedence tests |
