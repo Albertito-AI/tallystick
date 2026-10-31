@@ -63,6 +63,63 @@ accept a backfill. The independent reviewer should give a concrete counterexampl
 interpretation and expected result, rather than accepting a generic assertion
 that any later append invalidates a closure.
 
+## R08/R09 decision gate: late first-version observations (31 October 2026)
+
+The current helper tests whether **superseding value revisions** predate an
+active closure. A new *first-version* observation has no predecessor and is not
+included in that revision check. The reviewer must decide whether this hybrid
+treatment of initial records and corrections is intentional. The examples below
+are analytical source-code characterisations, **not** independently executed
+tests or an approved specification. They assume a single fictional event,
+period 2, official fact states, matching deadlines and a market threshold of
+five, evaluated after all stated receipts.
+
+| Case | Recorder append history | Count before / after later record | Code-path characterisation | Decision needed |
+| --- | --- | --- | --- | --- |
+| R08 | Closure(count=1), then new corner(value=1) | 0 / 1 | Closure-only initially has closure_count_mismatch; the later first-version fact can make the total match and settle under, without a new closure | Can a previously declared aggregate cover a later locally recorded occurrence? |
+| R09 | Closure(count=0), then new corner(value=0) | 0 / 0 | Both the closure-only history and the history containing the later first-version zero can settle under; no value-changing revision is detected | Does an initial zero-valued occurrence carry completeness meaning, or must zero require a superseded earlier positive record? |
+| Control | Corner(value=1), then closure(count=1) | 1 | The normal aggregate-matching history can settle under | Record the distinction from R08 explicitly |
+| Mismatch | Corner(value=1), then closure(count=0) | 1 | closure_count_mismatch | Confirms aggregate disagreement is a separate gate |
+
+Both R08 and R09 should be reproduced by an independent implementer against
+the exact candidate commit before treating the code-path description as an
+observed execution result. Use the fictional fixture constructors in
+conformance/fixtures.py and the independent evaluator
+conformance/reference.mjs. Capture input JSON, receipt/append ordering,
+as_of, Python output, JavaScript output and environment; do not put a
+provisional expected result into a normative regression test merely to make
+the suite green.
+
+The current reference behaves as **aggregate reconciliation for newly inserted
+observations**, while proposing **append-order acknowledgement for value
+corrections**. That combination can be deliberate, but it is not equivalent to
+proof that a source has acknowledged every individual message.
+
+Three models are available for an explicit independent decision, not as new
+implemented features:
+
+1. **Aggregate-only closure:** a source attests the final aggregate, not a
+   recorder prefix. Late first-version observations may make the sum agree;
+   the local count match remains insufficient to authenticate the source,
+   finality or full coverage.
+2. **Local prefix acknowledgement:** every relevant first-version observation
+   and value correction must precede the closure in recorder append order.
+   R08/R09 would need fresh acknowledgement even for a zero-valued record;
+   legitimate delayed and bulk imports could be left pending.
+3. **Source-versioned acknowledgement:** a signed or otherwise authenticated
+   provider sequence/watermark declares the exact coverage. This is not
+   implemented or available from the fictional example, and may require an
+   additional schema/source profile rather than a change to this evaluator.
+
+For the final decision, the reviewer should record the selected interpretation,
+a counterexample it rejects, the expected statuses for R08/R09, handling of
+same-time ties and historical as_of, whether initial zero records are valid
+under the factual ontology, and the source evidence required for a new closure.
+Where no defensible source contract exists, keep the historical adapter and
+production claims gated rather than silently selecting a model. A decision and
+new tests must precede any D1 semantic freeze; an AI-authored decision grid is
+not independent approval.
+
 ## Reviewer's required questions
 
 - What event exactly constitutes source acknowledgement of a correction:
