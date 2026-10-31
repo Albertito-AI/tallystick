@@ -49,6 +49,57 @@ class SettlementConformanceTests(unittest.TestCase):
     def test_380_match_synthetic_season_and_corrections(self) -> None:
         self.compare_rows(_fixtures.synthetic_season())
 
+    def test_equal_timestamp_closure_requires_later_append_order(self) -> None:
+        case = _fixtures.complete_case(1)
+        original, closed = case["facts"][0], case["facts"][-1]
+        second = _fixtures.fact("offsetting-record", value=0)
+        case["facts"].insert(-1, second)
+        stamp = "2026-11-04T08:00:00Z"
+        earlier_ack = _fixtures.revised(closed, 1, received_at=stamp)
+        case["facts"].extend([
+            earlier_ack,
+            _fixtures.revised(original, 0, received_at=stamp),
+            _fixtures.revised(second, 1, received_at=stamp),
+        ])
+        self.compare_rows([{"name": "tied_receipt_closure_first",
+                            "input": deepcopy(case),
+                            "expected": {"status": "pending", "outcome": None, "count": None,
+                                         "reasons": ["stale_closure"]}}])
+        case["facts"].append(_fixtures.revised(earlier_ack, 1, received_at=stamp))
+        self.compare_rows([{"name": "tied_receipt_closure_after",
+                            "input": case,
+                            "expected": {"status": "settled", "outcome": "under", "count": 1,
+                                         "reasons": []}}])
+
+    def test_distinct_receipt_time_and_append_order_failures(self) -> None:
+        # Provisional RFC 0001 R03/R04 expectations; independent review is pending.
+        stamp = "2026-11-04T08:00:00Z"
+        cases = []
+        for name in ("R03_later_append_earlier_timestamp",
+                     "R04_earlier_append_later_timestamp"):
+            case = _fixtures.complete_case(1)
+            first, closed = case["facts"][0], case["facts"][-1]
+            second = _fixtures.fact("offsetting-axis-record", value=0)
+            case["facts"].insert(-1, second)
+            corrections = [
+                _fixtures.revised(first, 0, received_at=stamp),
+                _fixtures.revised(second, 1, received_at=stamp),
+            ]
+            if name.startswith("R03"):
+                # Appended after both changes but with an earlier declared time.
+                ack = _fixtures.revised(
+                    closed, 1, received_at="2026-11-03T21:30:00Z")
+                case["facts"].extend(corrections + [ack])
+            else:
+                # Declared after both changes but appended before either one.
+                ack = _fixtures.revised(
+                    closed, 1, received_at="2026-11-04T08:01:00Z")
+                case["facts"].extend([ack] + corrections)
+            cases.append({"name": name, "input": case,
+                          "expected": {"status": "pending", "outcome": None,
+                                       "count": None, "reasons": ["stale_closure"]}})
+        self.compare_rows(cases)
+
     def test_unrelated_event_and_period_do_not_change_result(self) -> None:
         case = _fixtures.complete_case(5)
         baseline = evaluate(case["market"], case["facts"], as_of=case["as_of"])
