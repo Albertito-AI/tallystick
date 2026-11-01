@@ -100,6 +100,51 @@ class SettlementConformanceTests(unittest.TestCase):
                                        "count": None, "reasons": ["stale_closure"]}})
         self.compare_rows(cases)
 
+    def test_postclosure_initial_observations_characterisation(self) -> None:
+        # RFC 0001 R08/R09: compare both first-party evaluators without
+        # prescribing the contested post-closure settlement status.
+        # Independent semantic review must decide the eventual contract.
+        late_time = "2026-11-03T21:05:00Z"
+        late_positive = _fixtures.fact(
+            "late-initial-corner-r08", value=1, received_at=late_time)
+        r08 = _fixtures.complete_case(0)
+        r08["facts"][0]["value"] = 1  # Earlier aggregate, no occurrence yet.
+        r08_before = deepcopy(r08)
+        r08["facts"].append(late_positive)
+
+        late_zero = _fixtures.fact(
+            "late-initial-zero-r09", value=0, received_at=late_time)
+        r09 = _fixtures.complete_case(0)
+        r09_before = deepcopy(r09)
+        r09["facts"].append(late_zero)
+
+        r08_control = deepcopy(r08)
+        r08_control["facts"] = [late_positive, r08_before["facts"][0]]
+        r09_control = deepcopy(r09)
+        r09_control["facts"] = [late_zero, r09_before["facts"][0]]
+
+        cases = [
+            ("R08_before", r08_before),
+            ("R08_late_initial", r08),
+            ("R08_initial_before_closure", r08_control),
+            ("R09_before", r09_before),
+            ("R09_late_zero_initial", r09),
+            ("R09_zero_before_closure", r09_control),
+        ]
+        references = run_reference([data for _, data in cases])
+        self.assertEqual(len(references), len(cases))
+        for (name, data), reference in zip(cases, references):
+            with self.subTest(case=name):
+                observed = evaluate(
+                    data["market"], data["facts"], as_of=data["as_of"])
+                self.assertEqual(observed, reference)
+        # The pre-late-occurrence R08 control has an unmatched total; this
+        # is an existing aggregate gate, not an R08/R09 semantic decision.
+        before = evaluate(
+            r08_before["market"], r08_before["facts"],
+            as_of=r08_before["as_of"])
+        self.assertEqual(before["reasons"], ["closure_count_mismatch"])
+
     def test_unrelated_event_and_period_do_not_change_result(self) -> None:
         case = _fixtures.complete_case(5)
         baseline = evaluate(case["market"], case["facts"], as_of=case["as_of"])

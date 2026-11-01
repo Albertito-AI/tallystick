@@ -120,6 +120,22 @@ production claims gated rather than silently selecting a model. A decision and
 new tests must precede any D1 semantic freeze; an AI-authored decision grid is
 not independent approval.
 
+## Local cross-language characterisation for R08/R09 (1 November 2026)
+
+The draft includes `test_postclosure_initial_observations_characterisation`
+in `tests/test_conformance.py`. It constructs six fictional control/history
+cases covering a positive initial occurrence appended after closure, a zero
+initial occurrence appended after closure, and their pre-closure controls.
+The test requires the Python and independent JavaScript evaluators to agree,
+but **deliberately does not prescribe** either contested post-closure outcome.
+Only the existing pre-insertion aggregate-mismatch gate has an asserted result.
+
+This is a first-party regression *characterisation*, not semantic approval,
+provider authentication or independent reproduction. Check the exact candidate
+commit's CI before treating the new test as successfully executed. The reviewer
+still needs to decide R08/R09 expected statuses and source-acknowledgement
+semantics; later normative assertions should follow that decision.
+
 ## Reviewer's required questions
 
 - What event exactly constitutes source acknowledgement of a correction:
