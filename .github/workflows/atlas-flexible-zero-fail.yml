@@ -12,10 +12,6 @@ permissions:
   actions: write
   issues: write
 
-concurrency:
-  group: atlas-flexible-zero-fail-${{ github.repository }}
-  cancel-in-progress: true
-
 jobs:
   atlas-zero-fail:
     permissions:
