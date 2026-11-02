@@ -47,8 +47,8 @@ The v0.1 synthetic reference exists and the experimental repository is public
    exists. A later bounded pilot also needs agreed scope, acceptance, funding
    and lawful operational controls.
 
-The [milestone tracker](https://docs.google.com/spreadsheets/d/14RagHzEOrQOXQ5ou4njYQPALDvqZctReXmwGSUbVivk/edit)
-is the private operational status record, not a public customer ledger.
+The canonical private milestone tracker is the operational status record,
+not a public customer ledger.
 Release decisions, sponsorship readiness and actual available collections
 must remain distinct. No licensed feed, customer adoption, independent review,
 production deployment or funding is implied by publishing the reference.
