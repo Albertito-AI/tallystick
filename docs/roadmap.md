@@ -17,16 +17,41 @@ are not delivery commitments.
 | Commercial integration | Licensed adapters and a funded customer problem; bounded support and acceptance requirements | Paid engagement completed and accepted; measured customer benefit and actual delivery cost |
 | Wider interfaces and governance | Stable SDKs, host testing of the initial MCP interface, outside implementations and a governance proposal | Interoperability results and external implementer participation; funding and maintenance ownership established |
 
-## The next three milestones
+## Next evidence gates (reviewed 2 November 2026)
 
-1. Freeze the v0.1 reference semantics after reviewing disagreements and known
-   limits. Publish the exact test commands and generated synthetic evidence.
-2. Select one prospective shadow-settlement use case. Confirm the actual data
-   rights, settlement rules, comparison method and expected benefit before
-   writing a provider-specific adapter.
-3. Run the bounded pilot only after the required commercial and operational
-   conditions are satisfied. Record every disagreement and the cost of resolving
-   it before deciding on a larger service.
+The v0.1 synthetic reference exists and the experimental repository is public
+(L0). The later validated versioned release (L1) is **not complete**.
+
+1. **D1, v0.2 reference freeze:** settle the documented semantics, schema and
+   reproducibility contract. [Draft PR #1](https://github.com/Albertito-AI/tallystick/pull/1)
+   proposes RFC 0001's two-axis correction acknowledgement. Its first-party
+   tests and passing commit-specific CI do **not** constitute independent
+   semantic approval. Obtain an independent domain review of the
+   [R01-R12 packet](rfc-0001-independent-review-packet.md), especially delayed
+   historical imports, late initial observations, zero-value records, declared
+   receipt time versus recorder append order, and upstream source authority.
+   Resolve findings in the existing PR, safely integrate the current main tree,
+   then validate the **exact combined candidate** before deciding whether to
+   merge and freeze. No date or green status substitutes for those steps.
+2. **D2, independent reproduction:** obtain two genuine non-implementer
+   reproductions of a specified public commit and synthetic workflow. Keep
+   the tested SHA, environment, commands, inputs, observed outcomes, failures,
+   material assistance and reviewer consent in private review receipts.
+   Internal Python/JavaScript agreement, hosted CI and AI-prepared commentary
+   do not count as independent users. Cite external findings publicly only
+   with permission.
+3. **C1/C2, one customer problem and permitted data path:** qualify a specific
+   settlement or source-correction review task, the responsible buyer, a usable
+   historical dataset and rights for acquisition, analysis, retention and
+   export. A provider-specific adapter remains blocked until that evidence
+   exists. A later bounded pilot also needs agreed scope, acceptance, funding
+   and lawful operational controls.
+
+The [milestone tracker](https://docs.google.com/spreadsheets/d/14RagHzEOrQOXQ5ou4njYQPALDvqZctReXmwGSUbVivk/edit)
+is the private operational status record, not a public customer ledger.
+Release decisions, sponsorship readiness and actual available collections
+must remain distinct. No licensed feed, customer adoption, independent review,
+production deployment or funding is implied by publishing the reference.
 
 ## Measurements
 
