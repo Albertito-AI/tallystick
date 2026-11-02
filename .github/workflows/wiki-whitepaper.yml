@@ -1,0 +1,33 @@
+name: Publish project whitepaper to Wiki
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wiki/**'
+      - '.github/scripts/*publish_wiki.py'
+      - '.github/workflows/wiki-whitepaper.yml'
+  gollum:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wiki-whitepaper-${{ github.repository }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository_owner == 'Albertito-AI'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Check preservation of existing Wiki content
+        run: python3 -B -m unittest discover -s .github/scripts -p 'test_publish_wiki.py'
+      - name: Publish maintained pages or record the initialisation blocker
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/publish_wiki.py
