@@ -183,6 +183,8 @@ implementation mapping are in [the foundation record](docs/foundation.md).
 The original document is retained separately; it has not been silently edited
 or republished as verified current legal or market research.
 
+Read [the substantive project whitepaper](wiki/Whitepaper.md) in its public, versioned repository source. The [Wiki publication notes](wiki/README.md) explain the separate GitHub Wiki publishing state; a committed page is not by itself a live Wiki page.
+
 Read [the foundation review](docs/foundation-review.md),
 [settlement semantics](docs/settlement-semantics.md),
 [pricing assumptions](docs/pricing.md),
