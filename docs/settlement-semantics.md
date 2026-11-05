@@ -70,14 +70,19 @@ that all real-world events have been observed or that the source's total is true
 
 When an occurrence's value changes, its closure must have a receipt timestamp at
 or after every value-changing revision in the selected active occurrences'
-history. Equal timestamps are allowed. A count mismatch produces
-`closure_count_mismatch`; matching totals with an older closure produce
-`stale_closure`. This second check covers offsetting corrections whose net count
-stays unchanged. A closure can acknowledge those corrections through a new
-revision carrying the same total. State promotions without a value change do not
-require a later closure. Future revisions beyond the evaluation time and changes
-to unrelated events, metrics or periods are excluded. Both the original and
-corrected records remain in the log.
+history, and must appear *later* in the recorder's append-order history than
+those changes. A count mismatch produces `closure_count_mismatch`; matching
+totals without a sufficiently recent closure produce `stale_closure`. This
+second check covers offsetting corrections whose net count stays unchanged.
+A closure can acknowledge those corrections through a new revision carrying
+the same total. Equal receipt timestamps are allowed only when the closure
+is appended after the corrections. This local ordering rule does not authenticate
+the upstream declaration or prove external causal order.
+
+State promotions without a value change do not require a later closure.
+Future revisions beyond the evaluation time and changes to unrelated events,
+metrics or periods are excluded. Both the original and corrected records remain
+in the log.
 
 ## Deterministic evaluation
 

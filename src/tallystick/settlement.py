@@ -130,12 +130,18 @@ def _closure_covers_value_changes(occurrences: list[dict], closure: dict, histor
     """A matching total must also acknowledge all value corrections it covers."""
     declared_at = parse_time(closure["received_at"])
     by_id = {fact["fact_id"]: fact for fact in history}
+    positions = {fact["fact_id"]: position for position, fact in enumerate(history)}
+    closure_position = positions[closure["fact_id"]]
     for occurrence in occurrences:
         current = occurrence
         while current["supersedes"] is not None:
             previous = by_id[current["supersedes"]]
-            if current["value"] != previous["value"] and parse_time(current["received_at"]) > declared_at:
-                return False
+            if current["value"] != previous["value"]:
+                # Receipt times can tie; a closure logged before a correction cannot
+                # acknowledge it, even when both records declare the same instant.
+                if (parse_time(current["received_at"]) > declared_at or
+                        positions[current["fact_id"]] > closure_position):
+                    return False
             current = previous
     return True
 

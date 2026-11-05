@@ -83,6 +83,17 @@ class SettlementTests(unittest.TestCase):
         history.append(revision(closed))  # Equal receipt time covers both changes.
         self.assertEqual((self.evaluate(history)["status"], self.evaluate(history)["count"]), ("settled", 1))
 
+    def test_closure_with_same_timestamp_logged_before_corrections_is_stale(self):
+        first, second, closed = fact("tie-first"), fact("tie-second", value=0), closure(1)
+        early_ack = revision(closed, suffix="tie-ack", received_at="2026-10-26T21:00:00Z")
+        withdrawn = revision(first, value=0, reason="Fictional withdrawal")
+        restored = revision(second, value=1, reason="Fictional offset")
+        history = [first, second, closed, early_ack, withdrawn, restored]
+        self.assertEqual(self.evaluate(history)["reasons"], ["stale_closure"])
+        history.append(revision(early_ack, suffix="tie-ack-after", received_at="2026-10-26T21:00:00Z"))
+        self.assertEqual((self.evaluate(history)["status"], self.evaluate(history)["count"]),
+                         ("settled", 1))
+
     def test_state_promotions_do_not_hide_or_create_value_change_freshness_requirements(self):
         original, closed = fact(), closure(1)
         promoted = revision(original, suffix="confirmed", received_at="2026-10-26T21:10:00Z")
