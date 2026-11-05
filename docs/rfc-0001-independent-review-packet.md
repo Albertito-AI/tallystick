@@ -1,6 +1,6 @@
 # RFC 0001: independent semantic review packet
 
-Status: **review requested, not approved**. Prepared on 28 October 2026 for the
+Status: **prepared for independent review, not yet submitted or approved**. Originally prepared on 28 October 2026 for the
 existing [draft PR #1](https://github.com/Albertito-AI/tallystick/pull/1).
 This is an AI-assisted first-party review aid, not an independent review,
 external reproduction, or a normative statement about a live feed.
@@ -155,6 +155,52 @@ semantics; later normative assertions should follow that decision.
   malformed and adverse histories identically, and does the exact candidate
   revision pass the CI matrix after any change?
 
+## Reproducibility procedure for a non-implementing reviewer (5 November 2026)
+
+Record the *exact* 40-character PR commit SHA at the start of the review; do not
+use a moving branch name as the reviewed version. Work from an independent fresh
+checkout with Python 3.11 or later and Node.js 22 or later. The commands below
+are instructions, not a claim that a third party has run them:
+
+```sh
+git clone https://github.com/Albertito-AI/tallystick.git
+cd tallystick
+git fetch origin pull/1/head:review-pr-1
+# Replace REVIEW_SHA with the recorded exact commit SHA (from this PR).
+git checkout --detach REVIEW_SHA
+git rev-parse HEAD
+python -m venv .venv
+# Activate the environment for your shell, then:
+python -m pip install -e .
+python --version
+node --version
+python -m unittest discover -s tests -p test_conformance.py -v
+python -m unittest discover -s tests -p test_settlement.py -v
+```
+
+If Node.js cannot run, record the absence as **not reproduced**, even if Python
+unit tests pass; the conformance suite can skip Node-dependent checks. Capture
+exit codes, full outputs, platform/runtime versions and any assistance received.
+If installation or execution fails, retain the failure report. A clean-run receipt
+requires observed commands and results from an actual non-implementing person.
+
+A **semantic review** is a separate exercise. Before comparing with the current
+implementation, a competent domain reviewer should record independently reasoned
+expected statuses and reasons for R01–R12, particularly R08/R09, zero-valued
+first records, time ties, delayed import and source acknowledgement. Include the
+source authority and completeness assumptions, counterexamples and whether
+provider-specific messages would require a different profile. Mark any case
+**underdetermined** rather than inventing normative expectations. The recorded
+Python/JavaScript agreement characterises current code; it cannot adjudicate
+correctness. In a review receipt, distinguish (a) independent semantic findings,
+(b) independent execution, and (c) the maintainer's disposition of differences.
+
+After adjudication, update the existing PR's proposed semantics and tests, then
+combine it safely with the current main branch, run CI on the *exact combined
+commit* and record a compatibility decision. Do not infer these steps from
+mergeability or earlier green runs. No independent review, external reproduction
+or integrated-candidate verification was completed by adding this procedure.
+
 ## Independent-review receipt
 
 Record the reviewer identity or consented public handle, relevant expertise,
@@ -169,18 +215,21 @@ cases, and a final exact-commit check. A green workflow, a maintainer or
 AI-generated critique, and a mergeable draft do **not** satisfy independent
 semantic review, D1 freeze or D2 independent reproduction.
 
-## Current evidence and next gate
+## Historical evidence and next gate
 
-On 28 October 2026, PR #1 remained draft at
-`d5064a0973d2ee24912b98c9d90d8318c9556111`, with no submitted PR
-reviews or discussion comments. Its earlier five CI jobs passed for that exact
-head at
-https://github.com/Albertito-AI/tallystick/actions/runs/40470922928 .
-The default branch has since advanced to
-`04502d4f1ec34ee52866c8441e12b0d4440d1309` through CI-hardening
-changes. Recheck the current head and run results before any later merge.
+The 28 October note recorded draft head `d5064a0973d2ee24912b98c9d90d8318c9556111`
+and an earlier base. The later 1 November characterisation commit was
+`28605c97cd12d2fa04cded41357baef6ab42f04a`; both are **historical
+snapshots**, not a claim about the latest head. In the 5 November pre-edit check,
+main was `d729c695cae47f0075564f5f206f938096726c02`, PR #1 was open/draft
+at `28605c97cd12d2fa04cded41357baef6ab42f04a`, no submitted independent
+review or discussion comments were found, and the PR and main had diverged
+(seven ahead, ten behind). The last recorded PR implementation CI was successful
+at that PR SHA, but no combined-tree validation had occurred.
 
-**Next owner:** Albert to secure a competent independent reviewer, supported by
-the Tallystick maintainer's self-contained reproduction and review packet.
-Keep the PR in draft until the findings are adjudicated. No customer or
-licensed-feed use is authorised by this document.
+**Next owner:** Albert to secure a competent independent reviewer and two actual
+non-implementer reproductions, using the current pinned PR SHA. The maintainer
+must record findings and counterexamples in this existing PR, adjudicate the
+proposed contract, reconcile the current main branch and verify exact-combined
+CI before proposing D1 freeze or merge. This document authorises no new customer,
+licensed-feed, financial or external communication operation.
