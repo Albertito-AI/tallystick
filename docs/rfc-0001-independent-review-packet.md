@@ -201,6 +201,71 @@ commit* and record a compatibility decision. Do not infer these steps from
 mergeability or earlier green runs. No independent review, external reproduction
 or integrated-candidate verification was completed by adding this procedure.
 
+
+## Temporal replay and signed-checkpoint question (11 November 2026)
+
+**Status: first-party source analysis; proposed executable characterisation, not a test
+result, semantic decision, independent reproduction or defect finding.** This
+extends R06/R08/R09 within RFC 0001; it does not start another RFC or change
+the settlement rule. At draft head \`be06d53b113d94ab480271a018786078cc483b2d\`,
+\`active_snapshot(facts, as_of)\` scans the *supplied full history*, validates
+append-order revisions, and selects observation heads whose declared
+\`received_at <= as_of\`. No separate authenticated ledger-prefix, insertion
+sequence at a prior checkpoint, or original operator-decision record is an
+input to \`evaluate\`.
+
+The same declared cutoff can therefore yield different results when a later
+supplied history contains a new first-version record declaring an older/equal
+receipt time. That does not establish wrong behaviour: a receipt-time replay
+of the *currently supplied evidence* and an "as known by this recorder at its
+earlier decision" reconstruction are different evidential questions.
+
+| Fictional history supplied to evaluator | Declared \`as_of\` | Source-derived result to test, **not observed here** |
+| --- | --- | --- |
+| H0: \`closure(0)\` | \`TIME\` | \`settled/under\` with closure-only \`fact_ids\` |
+| H1: H0, then \`fact("late-positive", value=1)\` appended later with \`received_at=TIME\` | same \`TIME\` | \`pending/closure_count_mismatch\`; new occurrence appears in \`fact_ids\` |
+| H2: H0, then \`fact("late-zero", value=0)\` appended later with \`received_at=TIME\` | same \`TIME\` | \`settled/under\` but \`fact_ids\` includes the new zero-valued occurrence |
+
+This minimal script deliberately *prints* observed outputs rather than
+asserting that a particular unresolved closure contract is correct. It uses
+the repository's fictional TEST fixtures. Pin a real 40-character commit SHA
+in an isolated checkout before executing, and record that SHA, runtime
+versions, exact output and assistance:
+
+~~~python
+import sys
+sys.path.insert(0, "tests")
+from fixtures_core import TIME, closure, fact, market
+from tallystick.settlement import evaluate
+
+h0 = [closure(0)]
+h1 = h0 + [fact("late-positive", value=1, received_at=TIME)]
+h2 = h0 + [fact("late-zero", value=0, received_at=TIME)]
+for label, history in (("H0", h0), ("H1", h1), ("H2", h2)):
+    r = evaluate(market(), history, as_of=TIME)
+    print(label, r["status"], r["outcome"], r["reasons"], r["fact_ids"])
+~~~
+
+**Independent reviewer decision required:** Is \`as_of\` expressly only a
+declared-receipt-time filter over available history, or is reconstruction of
+what an operator knew at a signed earlier checkpoint also promised? If the
+latter, identify the externally trustworthy evidence needed to bind a local
+append-prefix/checkpoint, rule version, authenticated receipt order and
+historical source acknowledgement. Decide separately how H1/H2, delayed
+imports, late first-version observations and value corrections affect closure
+completeness. A locally signed prefix cannot itself prove upstream truth,
+source completeness or data-use rights. Mark insufficiently specified cases
+**underdetermined** pending actual provider-specific authority.
+
+**Acceptance gate:** two real non-implementers execute this and the established
+R01–R12 tests on the *same exact reviewed candidate* and report actual output,
+environment, observed discrepancies and assistance; an independent domain
+reviewer first supplies reasoned expected semantics. The maintainer then
+disposes of findings in the existing draft PR and validates a guarded
+combination with current main. Neither this section nor the current green
+separate-branch CI satisfies D1, D2 or L1. No customer dataset, production
+settlement or payment operation is involved.
+
 ## Independent-review receipt
 
 Record the reviewer identity or consented public handle, relevant expertise,
