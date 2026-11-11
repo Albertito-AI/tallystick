@@ -207,12 +207,12 @@ or integrated-candidate verification was completed by adding this procedure.
 **Status: first-party source analysis; proposed executable characterisation, not a test
 result, semantic decision, independent reproduction or defect finding.** This
 extends R06/R08/R09 within RFC 0001; it does not start another RFC or change
-the settlement rule. At draft head \`be06d53b113d94ab480271a018786078cc483b2d\`,
-\`active_snapshot(facts, as_of)\` scans the *supplied full history*, validates
+the settlement rule. At draft head `be06d53b113d94ab480271a018786078cc483b2d`,
+`active_snapshot(facts, as_of)` scans the *supplied full history*, validates
 append-order revisions, and selects observation heads whose declared
-\`received_at <= as_of\`. No separate authenticated ledger-prefix, insertion
+`received_at <= as_of`. No separate authenticated ledger-prefix, insertion
 sequence at a prior checkpoint, or original operator-decision record is an
-input to \`evaluate\`.
+input to `evaluate`.
 
 The same declared cutoff can therefore yield different results when a later
 supplied history contains a new first-version record declaring an older/equal
@@ -220,11 +220,11 @@ receipt time. That does not establish wrong behaviour: a receipt-time replay
 of the *currently supplied evidence* and an "as known by this recorder at its
 earlier decision" reconstruction are different evidential questions.
 
-| Fictional history supplied to evaluator | Declared \`as_of\` | Source-derived result to test, **not observed here** |
+| Fictional history supplied to evaluator | Declared `as_of` | Source-derived result to test, **not observed here** |
 | --- | --- | --- |
-| H0: \`closure(0)\` | \`TIME\` | \`settled/under\` with closure-only \`fact_ids\` |
-| H1: H0, then \`fact("late-positive", value=1)\` appended later with \`received_at=TIME\` | same \`TIME\` | \`pending/closure_count_mismatch\`; new occurrence appears in \`fact_ids\` |
-| H2: H0, then \`fact("late-zero", value=0)\` appended later with \`received_at=TIME\` | same \`TIME\` | \`settled/under\` but \`fact_ids\` includes the new zero-valued occurrence |
+| H0: `closure(0)` | `TIME` | `settled/under` with closure-only `fact_ids` |
+| H1: H0, then `fact("late-positive", value=1)` appended later with `received_at=TIME` | same `TIME` | `pending/closure_count_mismatch`; new occurrence appears in `fact_ids` |
+| H2: H0, then `fact("late-zero", value=0)` appended later with `received_at=TIME` | same `TIME` | `settled/under` but `fact_ids` includes the new zero-valued occurrence |
 
 This minimal script deliberately *prints* observed outputs rather than
 asserting that a particular unresolved closure contract is correct. It uses
@@ -246,7 +246,7 @@ for label, history in (("H0", h0), ("H1", h1), ("H2", h2)):
     print(label, r["status"], r["outcome"], r["reasons"], r["fact_ids"])
 ~~~
 
-**Independent reviewer decision required:** Is \`as_of\` expressly only a
+**Independent reviewer decision required:** Is `as_of` expressly only a
 declared-receipt-time filter over available history, or is reconstruction of
 what an operator knew at a signed earlier checkpoint also promised? If the
 latter, identify the externally trustworthy evidence needed to bind a local
