@@ -32,10 +32,12 @@ corrections in the local log.
 
 ## Compatibility, affected components and testing
 
-The rule changes one observable behaviour: time-tied closure records that
-precede covered corrections now fail conservatively. Existing accepted histories
-whose closure already follows their corrections, including equal-time ties,
-retain their result. It changes no JSON schema fields or public API shape.
+The rule adds an append-order condition: closure records that precede covered
+value corrections now fail conservatively, including both equal receipt times
+and a closure whose declared receipt time is later than those corrections.
+The latter case can arise during delayed or reordered imports (R04). Existing
+accepted histories whose closure already follows their corrections retain their
+result. It changes no JSON schema fields or public API shape.
 
 Python: `src/tallystick/settlement.py`, using indices from append-order history.
 Independent JavaScript: `conformance/reference.mjs`, retaining the latest
