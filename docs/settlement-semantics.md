@@ -40,10 +40,15 @@ cannot be revised. Exceptional disputes after finality therefore require a
 separately designed adjudication process; this implementation does not silently
 reopen them.
 
-Occurrence records have value `1`, or `0` when a correction withdraws an occurrence.
-The event kind stays unchanged; the reason records the reclassification. This
-choice preserves lineage without making a withdrawn corner into an unrelated
-goal event. A genuine different event requires its own observation.
+The current schema admits occurrence values `0` and `1`, including a `0` in
+an **initial** occurrence record. A revision from `1` to `0` can withdraw a
+previously counted occurrence while retaining its identity, with a correction
+reason. An initial zero-valued record, however, is not necessarily a withdrawal:
+the schema does not itself establish what that record means in an upstream source.
+Its evidential and completeness treatment remains an open R09 semantic question
+in [RFC 0001](rfc-0001-independent-review-packet.md), requiring source-specific
+review before any freeze or historical-data claim. A genuine different event
+requires its own observation.
 
 All timestamps use UTC `YYYY-MM-DDTHH:MM:SS[.fraction]Z`, with up to six fractional
 digits. Occurrence must precede or equal receipt, receipt must precede or equal
@@ -70,14 +75,19 @@ that all real-world events have been observed or that the source's total is true
 
 When an occurrence's value changes, its closure must have a receipt timestamp at
 or after every value-changing revision in the selected active occurrences'
-history. Equal timestamps are allowed. A count mismatch produces
-`closure_count_mismatch`; matching totals with an older closure produce
-`stale_closure`. This second check covers offsetting corrections whose net count
-stays unchanged. A closure can acknowledge those corrections through a new
-revision carrying the same total. State promotions without a value change do not
-require a later closure. Future revisions beyond the evaluation time and changes
-to unrelated events, metrics or periods are excluded. Both the original and
-corrected records remain in the log.
+history, and must appear *later* in the recorder's append-order history than
+those changes. A count mismatch produces `closure_count_mismatch`; matching
+totals without a sufficiently recent closure produce `stale_closure`. This
+second check covers offsetting corrections whose net count stays unchanged.
+A closure can acknowledge those corrections through a new revision carrying
+the same total. Equal receipt timestamps are allowed only when the closure
+is appended after the corrections. This local ordering rule does not authenticate
+the upstream declaration or prove external causal order.
+
+State promotions without a value change do not require a later closure.
+Future revisions beyond the evaluation time and changes to unrelated events,
+metrics or periods are excluded. Both the original and corrected records remain
+in the log.
 
 ## Deterministic evaluation
 
@@ -97,7 +107,11 @@ selects the event and count rule, and returns:
 ```
 
 The illustrative IDs above are placeholders, not an actual receipt. `fact_ids`
-are sorted to make independent comparison deterministic. Pending and void results
+are sorted to make independent comparison deterministic. They identify the
+selected active fact revisions relevant to that decision, **not** every
+superseded revision or the complete append-only evidence history. An audit of
+historical corrections must retain and verify the separate full signed log.
+Pending and void results
 have null outcome/count, except that a settled result contains `over` or `under`.
 All malformed histories and unsupported rules raise `ValueError`; a caller must
 not convert an exception into a successful settlement.
