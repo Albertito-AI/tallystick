@@ -18,4 +18,4 @@ jobs:
       contents: read
       actions: write
       issues: write
-    uses: Albertito-AI/Albertito-AI/.github/workflows/atlas-flexible-zero-fail.yml@main
+    uses: Albertito-AI/Albertito-AI/.github/workflows/atlas-flexible-zero-fail.yml@2e849a36fd6a2b93d1a968efd4fcccdb7523132b
