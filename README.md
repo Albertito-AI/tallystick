@@ -222,3 +222,7 @@ Third-party dependencies keep their own licences. No rights to sports feeds,
 league data, names, marks or the supplied whitepaper are granted by these files.
 
 Copyright 2026 Albert Tan Sin Hon.
+
+## Sport governance teaching application
+
+Trace a contested scoring observation to the official correction. Have the registrar account for both versions before releasing a table. [Exercise and records](https://github.com/Albertito-AI/sport-governance-and-administration/blob/main/cases/19-basketball-integrity-referral.md) · [Albert Tan’s book and teaching companion](https://alberttansinhon.com/sport-governance/).
